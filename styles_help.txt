@@ -1,0 +1,20 @@
+/* Структура стилей */
+
+1. Шрифтовое семейство
+2. "Reset / Normalize" (стили для body, ul и т.п.)
+3. Блоки-символы (круглая иконка oicon, кнопка expand-button, лого)
+4. Служебные / вспомогательные классы
+5. Стили основных блоков разметки
+.cpanel
+.page-title
+.chapters
+.hero
+.chapter
+.footer
+.sidebar
+.blank
+
+6. Стили блоков в содержании
+.brands
+.contacts
+.langs
