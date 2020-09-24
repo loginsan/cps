@@ -471,6 +471,112 @@ ul, ol {
 }
 
 
+/* PRICES SECTION */
+.prices__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .875rem;
+}
+.prices__item {
+  position: relative;
+  box-sizing: border-box;
+  width: 260px;
+  height: 12.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #FFFFFF;
+  border-radius: .375rem;
+}
+.prices__dl {
+  font-size: .875rem;
+  margin: 0;
+  padding: 0;
+}
+.prices__dt {
+  margin-bottom: .25rem;
+  font-family: 'TT Lakes Medium';
+  line-height: 1rem;
+  color: #7E7E82;
+}
+.prices__dd {
+  margin-left: 0;
+  margin-bottom: 1rem;
+  line-height: 1.125rem;
+  color: #1B1C21;
+}
+.prices__dd:nth-child(3n) {
+  margin-bottom: 0;
+}
+.prices__order {
+  display: flex;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 119px;
+  height: 2rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-family: 'TT Lakes Bold';
+  font-size: .75rem;
+  line-height: 1.5rem;
+  text-indent: .75rem;
+  text-decoration: none;
+  background: #FF3E79 right .5rem center no-repeat;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+}
+.prices__order::after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .25rem;
+  line-height: 1rem;
+  background: url(./../img/gt-white.svg) 50% 50% no-repeat;
+  border-radius: 50%;
+}
+.prices__disclaimer {
+  max-width: 421px;
+  margin-bottom: 1rem;
+  font-size: .875rem;
+  line-height: 1.29rem;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+}
+.prices__getoffer {
+  font-family: 'TT Lakes Medium';
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  text-decoration: none;
+}
+.prices__getoffer::after {
+  position: relative;
+  top: 2px;
+  left: .5rem;
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: url(./../img/gt-red.svg) 50% 100% no-repeat;
+}
+.prices__container {
+  height: 14.5rem;
+}
+@media screen and (min-width:540px) {
+  .prices__container {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+
+
 /* ASIDE / SITE MENU */
 .site-menu {
   display: none;
@@ -491,6 +597,7 @@ ul, ol {
   font-size: .875em;
   line-height: 1rem;
   color: #7E7E82;
+  font-family: "TT Lakes Medium";
 }
 .footnotes__link {
   text-decoration: none;

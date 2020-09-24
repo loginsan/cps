@@ -3,8 +3,10 @@
   const breakp = window.matchMedia( "(min-width:33.75em)" );
   let brandsSwiper;
   let devicesSwiper;
+  let pricesSwiper;
   let brandsPages = document.querySelector(".brands__pagination");
   let devicesPages = document.querySelector(".devices__pagination");
+  let pricesPages = document.querySelector(".prices__pagination");
 
   const enableSwiper = function() {
     brandsSwiper = new Swiper(".brands__container", {
@@ -29,6 +31,17 @@
         clickable: true
       }
     });
+    pricesSwiper = new Swiper(".prices__container", {
+      a11y: true,
+      keyboardControl: true,
+      grabCursor: true,
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      pagination: {
+        el: ".prices__pagination",
+        clickable: true
+      }
+    });
   };
 
   const breakpChecker = function() {
@@ -38,11 +51,14 @@
         brandsSwiper.destroy(true, true);
         devicesPages.classList.add("dn");
         devicesSwiper.destroy(true, true);
+        pricesPages.classList.add("dn");
+        pricesSwiper.destroy(true, true);
       }
       return;
     } // else
     brandsPages.classList.remove("dn");
     devicesPages.classList.remove("dn");
+    pricesPages.classList.remove("dn");
     return enableSwiper();
   };
   breakp.addListener(breakpChecker);
