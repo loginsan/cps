@@ -4,9 +4,9 @@
   let brandsSwiper;
   let devicesSwiper;
   let pricesSwiper;
-  let brandsPages = document.querySelector(".brands__pagination");
-  let devicesPages = document.querySelector(".devices__pagination");
-  let pricesPages = document.querySelector(".prices__pagination");
+  const brandsPages = document.querySelector(".brands__pagination");
+  const devicesPages = document.querySelector(".devices__pagination");
+  const pricesPages = document.querySelector(".prices__pagination");
 
   const enableSwiper = function() {
     brandsSwiper = new Swiper(".brands__container", {
@@ -65,26 +65,44 @@
   breakpChecker();
 })();
 
-let heroButton = document.querySelector(".hero__expand-button");
-let heroBox = document.querySelector(".hero__spoiler");
+const heroButton = document.querySelector(".hero__expand-button");
+const heroBox = document.querySelector(".hero__spoiler");
 heroButton.addEventListener("click", function() {
   doExpand(this, heroBox, "hero__spoiler", "Читать далее");
 });
 
-let brandsButton = document.querySelector(".brands__expand-button");
-let brandsBox = document.querySelector(".brands__container");
+const brandsButton = document.querySelector(".brands__expand-button");
+const brandsBox = document.querySelector(".brands__container");
 brandsButton.addEventListener("click", function() {
   doExpand(this, brandsBox, "brands__container", "Показать все");
 });
 
-let devicesButton = document.querySelector(".devices__expand-button");
-let devicesBox = document.querySelector(".devices__container");
+const devicesButton = document.querySelector(".devices__expand-button");
+const devicesBox = document.querySelector(".devices__container");
 devicesButton.addEventListener("click", function() {
   doExpand(this, devicesBox, "devices__container", "Показать все");
 });
 
 
-let doExpand = function(button, target, cname, text, textR) {
+const sidebar = document.querySelector(".sidebar");
+const blank = document.querySelector(".blank");
+const menuOpenBtn = document.querySelector(".oicon--burger");
+const menuCloseBtn = document.querySelector(".oicon--close");
+menuOpenBtn.addEventListener("click", function() {
+  sidebar.classList.remove("sidebar--dn");
+  blank.classList.toggle("dn");
+});
+menuCloseBtn.addEventListener("click", function() {
+  sidebar.classList.add("sidebar--dn");
+  blank.classList.toggle("dn");
+});
+blank.addEventListener("click", function() {
+  sidebar.classList.add("sidebar--dn");
+  blank.classList.toggle("dn");
+});
+
+
+const doExpand = function(button, target, cname, text, textR) {
   textR = textR || "Скрыть";
   let reverse = button.classList.contains("expand-button--reverse");
   let height = target.scrollHeight;
