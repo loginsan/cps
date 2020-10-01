@@ -19,8 +19,72 @@
 .contacts
 .langs
 
+==== TO BE
+/
+  page-wrap (wrap)
+    page-content
+      cpanel
+        cpanel__blocks
+          cpanel__block
+            cpanel__list
+              cpanel__item
+                cpanel__link
+              cpanel__item--divider
+              logo
+      page
+        page__title|page-title
+        page__menu|chapters
+          chapters__list
+        page__hero|hero
+          hero__texts
+            hero__spoiler
+              hero__paragraph
+            hero__button
+          hero__figure
+            hero__img
+        page__chapter|chapter
+          chapter__title
+          chapter__body
+          : brands > (brands__pool > brands__list|cards, brands__pagination), brands__button
+          : devices > (devices__pool > devices__list|cards, devices__pagination), devices__button
+          : prices
+              prices__labels
+                prices__dl
+                  prices__dt
+              prices__pool
+                prices__list
+                  prices__item > (prices__dl… > prices__order|action-button)
+                prices__pagination
+              prices__disclaimer
+              prices__offer
+      page-footer
+        footnotes
+          footnotes__item
+            copyright, footnotes__link
+
+    page-aside (sidebar) | sidebar--main
+      sidehead
+        sidehead__list
+          sidehead__item
+            sidehead__button
+            logo
+        sidebar__nav
+          sitenav
+      sidefoot
+        vcard
+          vcard__line
+            vcard__icons
+            vcard__email
+            vcard__phone
+            langs
+  blank
+  modal
 
 
+
+
+
+==== IS
 /
   wrap
     content
