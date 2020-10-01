@@ -1,0 +1,59 @@
+/* ROUND-ICON */
+.oicon {
+  display: block;
+  font-size: 0;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.oicon::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #FF3E79 no-repeat 50% 50%;
+  border-radius: 50%;
+  text-indent: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.oicon:active::after, .oicon:hover::after, .oicon:focus::after {
+  background-color: #DD235C;
+  border-radius: 10%;
+  filter: hue-rotate(190deg) brightness(2);
+  transition: all .5s ease;
+}
+.oicon--burger::after { background-image: url('./../img/icon-menu.svg') }
+.oicon--call::after { background-image: url('./../img/icon-phone.svg') }
+.oicon--chat::after { background-image: url('./../img/icon-chat.svg') }
+.oicon--profile::after { background-image: url('./../img/icon-profile.svg') }
+.oicon--repair::after { background-image: url('./../img/icon-repair.svg') }
+.oicon--status::after { background-image: url('./../img/icon-checkstatus.svg') }
+.oicon--close::after { background-image: url('./../img/icon-close.svg') }
+.oicon--search::after { background-image: url('./../img/icon-search.svg') }
+
+@media screen and (min-width:1440px) {
+  .oicon--rich {
+    position: relative;
+    padding-right: 3rem;
+    margin-left: 1rem;
+    font-family: 'TT Lakes Medium';
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+  }
+  .oicon--rich::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .oicon--repair {
+    margin-left: 0;
+  }
+  .oicon--close {
+    display: none;
+  }
+}

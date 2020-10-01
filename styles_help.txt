@@ -18,3 +18,64 @@
 .brands
 .contacts
 .langs
+
+
+
+/
+  wrap
+    content
+      cpanel
+        cpanel__blocks
+          cpanel__block
+            cpanel__list
+              cpanel__item
+                cpanel__link
+              cpanel__item--divider
+              logo
+      page
+        page__title|page-title
+        page__menu|chapters
+          chapters__list
+        page__hero|hero
+          hero__texts
+            hero__spoiler
+              hero__paragraph
+            hero__button
+          hero__figure
+            hero__img
+        page__chapter|chapter
+          chapter__title
+          chapter__content
+          : brands > (brands__container > brands__list|cards, brands__pagination), brands__button
+          : devices > (devices__container > devices__list|cards, devices__pagination), devices__button
+          : prices
+              prices__labels
+                prices__dl
+                  prices__dt
+              prices__container
+                prices__list
+                  prices__item > (prices__dl… > prices__order|action-button)
+                prices__pagination
+              prices__disclaimer
+              prices__getoffer
+      page-footer
+        footnotes
+          footnotes__item
+            copyright, footnotes__link
+
+    sidebar
+      headline
+        headline__list
+          headline__item
+            headline__button
+            logo
+        sidebar__nav
+          menu-list
+      sidefooter
+        contacts
+          contacts__line
+            contacts__icons
+            contacts__email
+            contacts__phone
+            langs
+  blank

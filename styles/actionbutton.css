@@ -1,0 +1,27 @@
+.action-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  border-radius: 1rem;
+  font-family: 'TT Lakes Bold';
+  font-size: .75rem;
+  line-height: 1.5rem;
+  text-indent: .75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #FF3E79 right .5rem center no-repeat;
+  color: #FFFFFF;
+  outline: none;
+}
+.action-button::after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .25rem;
+  margin-left: .5rem;
+  line-height: 1rem;
+  background: url(./../img/gt-white.svg) 50% 50% no-repeat;
+  border-radius: 50%;
+}

@@ -1,0 +1,28 @@
+/* EXPAND-BUTTON */
+.expand-button {
+  display: flex;
+  height: 1.5rem;
+  padding: 0;
+  font-family: 'TT Lakes Medium';
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  letter-spacing: -0.2px;
+  border: none;
+  background-color: inherit;
+  color: #1B1C21;
+  cursor: pointer;
+  outline: none;
+}
+.expand-button::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .5rem;
+  background: transparent url('./../img/icon-readmore.svg') 50% 50% no-repeat;
+  transform: rotate(0deg)
+}
+.expand-button--reverse::before {
+  transform: rotate(180deg);
+  transition: transform .3s ease;
+}

@@ -9,7 +9,7 @@
   const pricesPages = document.querySelector(".prices__pagination");
 
   const enableSwiper = function() {
-    brandsSwiper = new Swiper(".brands__container", {
+    brandsSwiper = new Swiper(".brands__pool", {
       a11y: true,
       keyboardControl: true,
       grabCursor: true,
@@ -20,7 +20,7 @@
         clickable: true
       }
     });
-    devicesSwiper = new Swiper(".devices__container", {
+    devicesSwiper = new Swiper(".devices__pool", {
       a11y: true,
       keyboardControl: true,
       grabCursor: true,
@@ -31,7 +31,7 @@
         clickable: true
       }
     });
-    pricesSwiper = new Swiper(".prices__container", {
+    pricesSwiper = new Swiper(".prices__pool", {
       a11y: true,
       keyboardControl: true,
       grabCursor: true,
@@ -65,22 +65,22 @@
   breakpChecker();
 })();
 
-const heroButton = document.querySelector(".hero__expand-button");
-const heroBox = document.querySelector(".hero__spoiler");
+const heroButton = document.querySelector(".hero__button");
+const heroBox = document.querySelector(".hero__pool");
 heroButton.addEventListener("click", function() {
-  doExpand(this, heroBox, "hero__spoiler", "Читать далее");
+  doExpand(this, heroBox, "hero__pool", "Читать далее");
 });
 
-const brandsButton = document.querySelector(".brands__expand-button");
-const brandsBox = document.querySelector(".brands__container");
+const brandsButton = document.querySelector(".brands__button");
+const brandsBox = document.querySelector(".brands__pool");
 brandsButton.addEventListener("click", function() {
-  doExpand(this, brandsBox, "brands__container", "Показать все");
+  doExpand(this, brandsBox, "brands__pool", "Показать все");
 });
 
-const devicesButton = document.querySelector(".devices__expand-button");
-const devicesBox = document.querySelector(".devices__container");
+const devicesButton = document.querySelector(".devices__button");
+const devicesBox = document.querySelector(".devices__pool");
 devicesButton.addEventListener("click", function() {
-  doExpand(this, devicesBox, "devices__container", "Показать все");
+  doExpand(this, devicesBox, "devices__pool", "Показать все");
 });
 
 

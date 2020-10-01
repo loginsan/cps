@@ -1,24 +1,7 @@
-@font-face {
-  font-family: 'TT Lakes Regular';
-  src: url('TTLakes-Regular.eot');
-  src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'), url('TTLakes-Regular.woff') format('woff'), url('TTLakes-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'TT Lakes Medium';
-  src: url('TTLakes-Medium.eot');
-  src: url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'), url('TTLakes-Medium.woff') format('woff'), url('TTLakes-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'TT Lakes Bold';
-  src: url('TTLakes-Bold.eot');
-  src: url('TTLakes-Bold.eot?#iefix') format('embedded-opentype'), url('TTLakes-Bold.woff') format('woff'), url('TTLakes-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import 'fonts.css';
+@import 'oicon.css';
+@import 'expandbutton.css';
+@import 'actionbutton.css';
 
 body {
   margin: 0;
@@ -36,6 +19,11 @@ ul, ol {
 .hide-on-small {
   display: none;
 }
+@media screen and (min-width:540px) {
+  .hide-on-small {
+    display: block;
+  }
+}
 .logo {
   display: block;
   width: 97px;
@@ -45,95 +33,6 @@ ul, ol {
   text-decoration: none;
 }
 
-
-/* ROUND-ICON */
-.oicon {
-  display: block;
-  font-size: 0;
-  outline: none;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.oicon::after {
-  content: "";
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: #FF3E79 no-repeat 50% 50%;
-  border-radius: 50%;
-  text-indent: 150%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.oicon:active::after, .oicon:hover::after, .oicon:focus::after {
-  background-color: #DD235C;
-  border-radius: 10%;
-  filter: hue-rotate(190deg) brightness(2);
-  transition: all .5s ease;
-}
-.oicon--burger::after { background-image: url('./../img/icon-menu.svg') }
-.oicon--call::after { background-image: url('./../img/icon-phone.svg') }
-.oicon--chat::after { background-image: url('./../img/icon-chat.svg') }
-.oicon--profile::after { background-image: url('./../img/icon-profile.svg') }
-.oicon--repair::after { background-image: url('./../img/icon-repair.svg') }
-.oicon--status::after { background-image: url('./../img/icon-checkstatus.svg') }
-.oicon--close::after { background-image: url('./../img/icon-close.svg') }
-.oicon--search::after { background-image: url('./../img/icon-search.svg') }
-
-@media screen and (min-width:1440px) {
-  .oicon--rich {
-    position: relative;
-    padding-right: 3rem;
-    margin-left: 1rem;
-    font-family: 'TT Lakes Medium';
-    font-size: 1rem;
-    line-height: 2.5rem;
-    color: #1B1C21;
-    letter-spacing: -0.2px;
-  }
-  .oicon--rich::after {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .oicon--repair {
-    margin-left: 0;
-  }
-  .oicon--close {
-    display: none;
-  }
-}
-
-/* EXPAND-BUTTON */
-.expand-button {
-  display: flex;
-  height: 1.5rem;
-  padding: 0;
-  font-family: 'TT Lakes Medium';
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: left;
-  letter-spacing: -0.2px;
-  border: none;
-  background-color: inherit;
-  color: #1B1C21;
-  cursor: pointer;
-  outline: none;
-}
-.expand-button::before {
-  content: "";
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: .5rem;
-  background: transparent url('./../img/icon-readmore.svg') 50% 50% no-repeat;
-  transform: rotate(0deg)
-}
-.expand-button--reverse::before {
-  transform: rotate(180deg);
-  transition: transform .3s ease;
-}
 
 
 .page {
@@ -265,7 +164,7 @@ ul, ol {
 
 
 /* HERO BLOCK */
-.hero__texts {
+.hero__content {
   padding: 0 5% 1.5rem;
 }
 .hero__paragraph {
@@ -275,12 +174,12 @@ ul, ol {
   letter-spacing: 0.2px;
   color: #1B1C21;
 }
-.hero__spoiler {
+.hero__pool {
   height: auto;
   overflow: visible;
   transition: all .3s ease;
 }
-.hero__spoiler--short {
+.hero__pool--short {
   height: 6.5rem;
   overflow: hidden;
   margin-bottom: .5rem;
@@ -300,7 +199,7 @@ ul, ol {
     gap: 2rem;
     padding: 0 5%;
   }
-  .hero__texts {
+  .hero__content {
     flex-basis: 45%;
     padding: 0 0 1.5rem;
   }
@@ -311,13 +210,13 @@ ul, ol {
     border-radius: 6px;
     max-width: 100%;
   }
-  .hero__spoiler--short { height: 8rem }
+  .hero__pool--short { height: 8rem }
 }
 @media screen and (min-width:768px) {
-  .hero__spoiler--short { height: 10rem }
+  .hero__pool--short { height: 10rem }
 }
 @media screen and (min-width:1440px) {
-  .hero__spoiler--short { height: 12rem }
+  .hero__pool--short { height: 12rem }
 }
 
 
@@ -436,21 +335,21 @@ ul, ol {
 .brands__link--lenovo { background-image: url(./../files/brand-lenovo.png) }
 .brands__link--samsung { background-image: url(./../files/brand-samsung.png) }
 .brands__link--apple { background-image: url(./../files/brand-apple.png) }
-.brands__expand-button {
+.brands__button {
   display: none;
 }
 @media screen and (min-width:540px) {
-  .brands__container {
+  .brands__pool {
     height: auto;
     overflow: visible;
     transition: all .3s ease;
     margin-bottom: 1rem;
   }
-  .brands__container--short {
+  .brands__pool--short {
     height: 10rem;
     overflow: hidden;
   }
-  .brands__expand-button {
+  .brands__button {
     display: flex;
   }
 }
@@ -460,21 +359,21 @@ ul, ol {
 .devices__item {
   height: 10rem;
 }
-.devices__expand-button {
+.devices__button {
   display: none;
 }
 @media screen and (min-width:540px) {
-  .devices__container {
+  .devices__pool {
     height: auto;
     overflow: visible;
     transition: all .3s ease;
     margin-bottom: 1rem;
   }
-  .devices__container--short {
+  .devices__pool--short {
     height: 10rem;
     overflow: hidden;
   }
-  .devices__expand-button {
+  .devices__button {
     display: flex;
   }
 }
@@ -519,35 +418,11 @@ ul, ol {
   margin-bottom: 0;
 }
 .prices__order {
-  display: flex;
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  width: 119px;
-  height: 2rem;
-  text-transform: uppercase;
-  border-radius: 1rem;
-  font-family: 'TT Lakes Bold';
-  font-size: .75rem;
-  line-height: 1.5rem;
-  text-indent: .75rem;
-  text-decoration: none;
-  background: #FF3E79 right .5rem center no-repeat;
-  color: #FFFFFF;
-  justify-content: space-between;
-  align-items: center;
-  outline: none;
 }
-.prices__order::after {
-  content: "";
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: .25rem;
-  line-height: 1rem;
-  background: url(./../img/gt-white.svg) 50% 50% no-repeat;
-  border-radius: 50%;
-}
+
 .prices__disclaimer {
   max-width: 421px;
   margin-top: 1rem;
@@ -557,7 +432,7 @@ ul, ol {
   letter-spacing: 0.2px;
   color: #1B1C21;
 }
-.prices__getoffer {
+.prices__offer {
   font-family: 'TT Lakes Medium';
   font-size: 1rem;
   line-height: 1.5rem;
@@ -565,7 +440,7 @@ ul, ol {
   color: #1B1C21;
   text-decoration: none;
 }
-.prices__getoffer::after {
+.prices__offer::after {
   position: relative;
   top: 2px;
   left: .5rem;
@@ -576,14 +451,14 @@ ul, ol {
   line-height: 1rem;
   background: url(./../img/gt-red.svg) 50% 100% no-repeat;
 }
-.prices__container {
+.prices__pool {
   height: 14.5rem;
 }
 .prices__labels {
   display: none;
 }
 @media screen and (min-width:540px) {
-  .prices__container {
+  .prices__pool {
     height: auto;
     overflow: visible;
   }
@@ -702,7 +577,7 @@ ul, ol {
   justify-content: space-between;
   align-items: center;
   margin: 0 0 3.125rem;
-  padding: 0 1rem;
+  padding: 0 5%; /* 0 1rem */
   list-style: none;
 }
 .headline__button {
@@ -713,7 +588,7 @@ ul, ol {
 }
 @media screen and (min-width:360px) {
   .headline__list {
-    padding: 0 1.5rem;
+    padding: 0 5%; /* 0 1.5rem */
   }
 }
 
@@ -727,7 +602,7 @@ ul, ol {
 }
 .menu-list__link {
   display: block;
-  padding-left: 1.5rem;
+  padding-left: 5%; /* 1.5rem */
   color: #1B1C21;
   text-decoration: none;
   font-family: 'TT Lakes Medium';
@@ -756,7 +631,7 @@ ul, ol {
 
 
 .sidefooter {
-  padding-left: 1.5rem;
+  padding-left: 5%; /* 1.5rem */
   padding-bottom: 2rem;
 }
 .contacts {
@@ -902,11 +777,7 @@ ul, ol {
 }
 
 
-@media screen and (min-width:540px) {
-  .hide-on-small {
-    display: block;
-  }
-}
+
 
 
 @media screen and (min-width:768px) {
