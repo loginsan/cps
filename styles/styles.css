@@ -166,6 +166,12 @@ ul, ol {
   .page__title {
     padding-right: 45%;
   }
+  .page-title::before {
+    left: 2px;
+    width: 3px;
+    height: 40px;
+    border-radius: 2px;
+  }
 }
 
 
@@ -323,9 +329,6 @@ ul, ol {
 .cards {
   margin-bottom: 2rem;
 }
-.cards__item {
-  grid-area: "card";
-}
 @media screen and (min-width:540px) {
   .cards {
     display: grid;
@@ -346,7 +349,6 @@ ul, ol {
     gap: 1rem 2rem;
   }
 }
-
 /* CARDS__ITEM */
 .cards__item {
   min-width: 224px;
@@ -647,6 +649,11 @@ ul, ol {
   border: none;
   outline: none;
 }
+@media screen and (min-width:1440px) {
+  .headline {
+    padding-top: 1.875rem;
+  }
+}
 @media screen and (min-width:360px) {
   .headline__list {
     padding: 0 5%; /* 0 1.5rem */
@@ -666,10 +673,13 @@ ul, ol {
   font-size: 1rem;
   line-height: 2rem;
 }
-.sitenav__link:active, .sitenav__link:hover, .sitenav__link:focus {
+.sitenav__link:active {
   background-color: #41F6D7;
   transition: background-color .4s ease;
   outline: none;
+}
+.sitenav__link:hover {
+  color: #7E7E82;
 }
 .sitenav__link--active {
   position: relative;
@@ -684,6 +694,13 @@ ul, ol {
   height: 2rem;
   background-color: #41F6D7;
   border-radius: 0 4px 4px 0;
+}
+@media screen and (min-width:1440px) {
+  .sitenav__link--active::before {
+    left: 1px;
+    height: 1.75rem;
+    border-radius: 2px;
+  }
 }
 
 

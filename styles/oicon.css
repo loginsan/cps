@@ -45,6 +45,9 @@
     color: #1B1C21;
     letter-spacing: -0.2px;
   }
+  .oicon--rich:hover, .oicon--rich:focus, .oicon--rich:active {
+    color: #7E7E82;
+  }
   .oicon--rich::after {
     position: absolute;
     right: 0;

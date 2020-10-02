@@ -83,21 +83,38 @@ devicesButton.addEventListener("click", function() {
   doExpand(this, devicesBox, "devices__pool", "Показать все");
 });
 
+// sitenav__link
+const siteNavLinks = document.querySelectorAll(".sitenav__link");
+const siteNav = document.querySelector(".sitenav");
+const siteLinkActiveClass = "sitenav__link--active";
+for (let link of siteNavLinks) {
+  link.addEventListener("click", function(evt) {
+    this.blur();
+    evt.preventDefault();
+    if (this.classList.contains("sitenav__link--active")) {
+      return -1;
+    }
+    let activeLink = siteNav.querySelector("." + siteLinkActiveClass);
+    activeLink.classList.remove(siteLinkActiveClass);
+    this.classList.add(siteLinkActiveClass);
+  });
+}
 
-const sidebar = document.querySelector(".sidebar");
+
+const sidebar = document.querySelector(".aside");
 const blank = document.querySelector(".blank");
 const menuOpenBtn = document.querySelector(".oicon--burger");
 const menuCloseBtn = document.querySelector(".oicon--close");
 menuOpenBtn.addEventListener("click", function() {
-  sidebar.classList.remove("sidebar--dn");
+  sidebar.classList.remove("aside--dn");
   blank.classList.toggle("dn");
 });
 menuCloseBtn.addEventListener("click", function() {
-  sidebar.classList.add("sidebar--dn");
+  sidebar.classList.add("aside--dn");
   blank.classList.toggle("dn");
 });
 blank.addEventListener("click", function() {
-  sidebar.classList.add("sidebar--dn");
+  sidebar.classList.add("aside--dn");
   blank.classList.toggle("dn");
 });
 
