@@ -65,10 +65,10 @@
   breakpChecker();
 })();
 
-const heroButton = document.querySelector(".hero__button");
-const heroBox = document.querySelector(".hero__pool");
-heroButton.addEventListener("click", function() {
-  doExpand(this, heroBox, "hero__pool", "Читать далее");
+const storyButton = document.querySelector(".story__button");
+const storyBox = document.querySelector(".story__body");
+storyButton.addEventListener("click", function() {
+  doExpand(this, storyBox, "story__body", "Читать далее");
 });
 
 const brandsButton = document.querySelector(".brands__button");

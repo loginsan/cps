@@ -19,60 +19,76 @@
 .contacts
 .langs
 
+
+$textbase: #1B1C21  // black
+$textdim: #7E7E82  // grey
+$textfocus: #41F6D7  // green
+$border: #D9FFF5  // light-green
+$body: #F8F8F8  // light
+$white: #FFFFFF  // lighter
+
+
+@mixin nolist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
 ==== TO BE
 /
   page-wrap (wrap)
-    page-content
-      cpanel
+    page-inner (content)
+      header
         cpanel__blocks
           cpanel__block
-            cpanel__list
-              cpanel__item
-                cpanel__link
-              cpanel__item--divider
+            desk
+              desk__item
+                desk__link
+              desk__item--divider
               logo
       page
-        page__title|page-title
-        page__menu|chapters
+        page__title | page-title
+        page__menu | chapters
           chapters__list
-        page__hero|hero
-          hero__texts
-            hero__spoiler
-              hero__paragraph
-            hero__button
-          hero__figure
-            hero__img
-        page__chapter|chapter
+        page__story | story
+          story__wrap
+            story__body
+              story__line
+            story__button
+          story__figure
+            story__img
+        page__part | chapter
           chapter__title
           chapter__body
-          : brands > (brands__pool > brands__list|cards, brands__pagination), brands__button
-          : devices > (devices__pool > devices__list|cards, devices__pagination), devices__button
+          : brands > (brands__pool > brands__list | cards, brands__pagination), brands__button
+          : devices > (devices__pool > devices__list | cards, devices__pagination), devices__button
           : prices
               prices__labels
-                prices__dl
-                  prices__dt
+                price
+                  price__dt
               prices__pool
                 prices__list
-                  prices__item > (prices__dl… > prices__order|action-button)
+                  prices__item > (price… > prices__order | action-button)
                 prices__pagination
-              prices__disclaimer
+              prices__notice
               prices__offer
-      page-footer
-        footnotes
-          footnotes__item
-            copyright, footnotes__link
+      footer
+        credits
+          credits__item
+            copyright, credits__link
 
-    page-aside (sidebar) | sidebar--main
-      sidehead
+    aside (sidebar) | aside--main
+      aside__head
         sidehead__list
           sidehead__item
             sidehead__button
             logo
-        sidebar__nav
+        aside__nav
           sitenav
-      sidefoot
+      aside__footer
         vcard
-          vcard__line
+          vcard__row
             vcard__icons
             vcard__email
             vcard__phone

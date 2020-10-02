@@ -10,33 +10,32 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body class="cps-page">
-    <div class="wrap">
+    <div class="page-wrap">
       <div class="content">
 
         <header class="cpanel">
           <ul class="cpanel__blocks">
-            <li class="cpanel__block cpanel__block--primary hide-on-large">
+            <li class="cpanel__block cpanel__block--primary hide-xl">
               <ul class="cpanel__list">
                 <li class="cpanel__item">
-                  <!-- <a href="#" title="Меню" class="cpanel__link oicon oicon--burger">Меню</a> -->
                   <button type="button" tabindex="1" title="Меню" class="cpanel__link oicon oicon--burger">Меню</button>
                 </li>
-                <li class="cpanel__item cpanel__item--divider hide-on-small"></li>
+                <li class="cpanel__item cpanel__item--divider hide-xs"></li>
                 <li class="cpanel__item cpanel__item--logo logo"></li>
               </ul>
             </li>
             <li class="cpanel__block cpanel__block--secondary">
               <ul class="cpanel__list">
-                <li class="cpanel__item hide-on-small hide-on-large">
+                <li class="cpanel__item hide-xs hide-xl">
                   <a href="#" title="Позвонить" class="cpanel__link oicon oicon--call">Позвонить</a>
                 </li>
-                <li class="cpanel__item hide-on-small hide-on-large">
+                <li class="cpanel__item hide-xs hide-xl">
                   <a href="#" title="Чат" class="cpanel__link oicon oicon--chat">Чат</a>
                 </li>
-                <li class="cpanel__item hide-on-small hide-on-large">
+                <li class="cpanel__item hide-xs hide-xl">
                   <a href="#" title="Личный кабинет" class="cpanel__link oicon oicon--profile">Профиль</a>
                 </li>
-                <li class="cpanel__item cpanel__item--divider hide-on-large"></li>
+                <li class="cpanel__item cpanel__item--divider hide-xl"></li>
                 <li class="cpanel__item">
                   <a href="#" title="Оставить заявку" class="cpanel__link oicon oicon--repair oicon--rich">Оставить заявку</a>
                 </li>
@@ -63,23 +62,22 @@
             </ul>
           </nav>
 
-          <section class="page__hero hero">
-            <article class="hero__content">
-              <div class="hero__pool hero__pool--short">
-                <p class="hero__paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <p class="hero__paragraph">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+          <section class="page__story story">
+            <article class="story__wrap">
+              <div class="story__body story__body--short">
+                <p class="story__line">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                <p class="story__line">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
               </div>
-              <button class="hero__button expand-button">Читать далее</button>
+              <button class="story__button expand-button">Читать далее</button>
             </article>
-
-            <figure class="hero__figure"><img src="./files/hero-services.png" alt="CPS Services" class="hero__img" /></figure>
+            <figure class="story__figure"><img src="./files/hero-services.png" alt="CPS Services" class="story__img" /></figure>
           </section>
 
-          <section class="page__chapter chapter chapter--brands" id="brands">
+          <section class="page__part chapter chapter--brands" id="brands">
             <h2 class="chapter__title">Ремонт техники различных брендов</h2>
-            <article class="chapter__content brands">
+            <article class="chapter__body brands">
               <div class="brands__pool brands__pool--short swiper-container">
-                <ul class="brands__list cards swiper-wrapper">
+                <ul class="brands__list cards nolist swiper-wrapper">
                   <li class="brands__item swiper-slide cards__item"><a href="./sidebar.html" class="brands__link cards__link brands__link--lenovo">&nbsp;</a></li>
                   <li class="brands__item swiper-slide cards__item"><a href="./sidebar.html" class="brands__link cards__link brands__link--samsung">&nbsp;</a></li>
                   <li class="brands__item swiper-slide cards__item"><a href="./sidebar.html" class="brands__link cards__link brands__link--apple">&nbsp;</a></li>
@@ -98,11 +96,11 @@
             </article>
           </section>
 
-          <section class="page__chapter chapter chapter--devices" id="devices">
+          <section class="page__part chapter chapter--devices" id="devices">
             <h2 class="chapter__title">Ремонт различных видов техники</h2>
-            <article class="chapter__content devices">
+            <article class="chapter__body devices">
               <div class="devices__pool devices__pool--short swiper-container">
-                <ul class="devices__list cards swiper-wrapper">
+                <ul class="devices__list cards nolist swiper-wrapper">
                   <li class="devices__item swiper-slide cards__item"><a href="./sidebar.html" class="devices__link cards__link devices__link--notebook">Ремонт ноутбуков</a></li>
                   <li class="devices__item swiper-slide cards__item"><a href="./sidebar.html" class="devices__link cards__link devices__link--tablet">Ремонт планшетов</a></li>
                   <li class="devices__item swiper-slide cards__item"><a href="./sidebar.html" class="devices__link cards__link devices__link--pc">Ремонт ПК</a></li>
@@ -121,95 +119,97 @@
             </article>
           </section>
 
-          <section class="page__chapter chapter chapter--prices" id="prices">
+          <section class="page__part chapter chapter--prices" id="prices">
             <h2 class="chapter__title">Цены на услуги</h2>
-            <article class="chapter__content prices">
+            <article class="chapter__body prices">
               <div class="prices__labels">
-                <dl class="prices__dl prices__dl--label">
-                  <dt class="prices__dt prices__dt--label prices__dt--service">Ремонтные услуги</dt>
-                  <dt class="prices__dt prices__dt--label prices__dt--price">Цена</dt>
-                  <dt class="prices__dt prices__dt--label prices__dt--time">Срок</dt>
+                <dl class="price price--label">
+                  <dt class="price__dt price__dt--label price__dt--service">Ремонтные услуги</dt>
+                  <dt class="price__dt price__dt--label price__dt--price">Цена</dt>
+                  <dt class="price__dt price__dt--label price__dt--time">Срок</dt>
                 </dl>
               </div>
               <div class="prices__pool swiper-container">
-                <ul class="prices__list swiper-wrapper">
+                <ul class="prices__list nolist swiper-wrapper">
                   <li class="prices__item swiper-slide">
-                    <dl class="prices__dl">
-                      <dt class="prices__dt prices__dt--service">Ремонтные услуги</dt>
-                      <dd class="prices__dd prices__dd--service">Диагностика</dd>
-                      <dt class="prices__dt prices__dt--price">Цена</dt>
-                      <dd class="prices__dd prices__dd--price">Бесплатно</dd>
-                      <dt class="prices__dt prices__dt--time">Срок</dt>
-                      <dd class="prices__dd prices__dd--time">30 мин</dd>
+                    <dl class="price">
+                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                      <dd class="price__dd price__dd--service">Диагностика</dd>
+                      <dt class="price__dt price__dt--price">Цена</dt>
+                      <dd class="price__dd price__dd--price">Бесплатно</dd>
+                      <dt class="price__dt price__dt--time">Срок</dt>
+                      <dd class="price__dd price__dd--time">30 мин</dd>
                     </dl>
                     <a href="#" class="prices__order action-button">Заказать</a>
                   </li>
                   <li class="prices__item swiper-slide">
-                    <dl class="prices__dl">
-                      <dt class="prices__dt prices__dt--service">Ремонтные услуги</dt>
-                      <dd class="prices__dd prices__dd--service">Замена дисплея</dd>
-                      <dt class="prices__dt prices__dt--price">Цена</dt>
-                      <dd class="prices__dd prices__dd--price">1000 ₽</dd>
-                      <dt class="prices__dt prices__dt--time">Срок</dt>
-                      <dd class="prices__dd prices__dd--time">30-120 мин</dd>
+                    <dl class="price">
+                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                      <dd class="price__dd price__dd--service">Замена дисплея</dd>
+                      <dt class="price__dt price__dt--price">Цена</dt>
+                      <dd class="price__dd price__dd--price">1000 ₽</dd>
+                      <dt class="price__dt price__dt--time">Срок</dt>
+                      <dd class="price__dd price__dd--time">30-120 мин</dd>
                     </dl>
                     <a href="#" class="prices__order action-button">Заказать</a>
                   </li>
                   <li class="prices__item swiper-slide">
-                    <dl class="prices__dl">
-                      <dt class="prices__dt prices__dt--service">Ремонтные услуги</dt>
-                      <dd class="prices__dd prices__dd--service">Замена полифонического динамика</dd>
-                      <dt class="prices__dt prices__dt--price">Цена</dt>
-                      <dd class="prices__dd prices__dd--price">1000 ₽</dd>
-                      <dt class="prices__dt prices__dt--time">Срок</dt>
-                      <dd class="prices__dd prices__dd--time">30-120 мин</dd>
+                    <dl class="price">
+                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                      <dd class="price__dd price__dd--service">Замена полифонического динамика</dd>
+                      <dt class="price__dt price__dt--price">Цена</dt>
+                      <dd class="price__dd price__dd--price">1000 ₽</dd>
+                      <dt class="price__dt price__dt--time">Срок</dt>
+                      <dd class="price__dd price__dd--time">30-120 мин</dd>
                     </dl>
                     <a href="#" class="prices__order action-button">Заказать</a>
                   </li>
                   <li class="prices__item swiper-slide">
-                    <dl class="prices__dl">
-                      <dt class="prices__dt prices__dt--service">Ремонтные услуги</dt>
-                      <dd class="prices__dd prices__dd--service">Тестирование с выдачей технического заключения</dd>
-                      <dt class="prices__dt prices__dt--price">Цена</dt>
-                      <dd class="prices__dd prices__dd--price">1000 ₽</dd>
-                      <dt class="prices__dt prices__dt--time">Срок</dt>
-                      <dd class="prices__dd prices__dd--time">30-120 мин</dd>
+                    <dl class="price">
+                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                      <dd class="price__dd price__dd--service">Тестирование с выдачей технического заключения</dd>
+                      <dt class="price__dt price__dt--price">Цена</dt>
+                      <dd class="price__dd price__dd--price">1000 ₽</dd>
+                      <dt class="price__dt price__dt--time">Срок</dt>
+                      <dd class="price__dd price__dd--time">30-120 мин</dd>
                     </dl>
                     <a href="#" class="prices__order action-button">Заказать</a>
                   </li>
                   <li class="prices__item swiper-slide">
-                    <dl class="prices__dl">
-                      <dt class="prices__dt prices__dt--service">Ремонтные услуги</dt>
-                      <dd class="prices__dd prices__dd--service">Замена программного обеспечения</dd>
-                      <dt class="prices__dt prices__dt--price">Цена</dt>
-                      <dd class="prices__dd prices__dd--price">1000 ₽</dd>
-                      <dt class="prices__dt prices__dt--time">Срок</dt>
-                      <dd class="prices__dd prices__dd--time">30-120 мин</dd>
+                    <dl class="price">
+                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                      <dd class="price__dd price__dd--service">Замена программного обеспечения</dd>
+                      <dt class="price__dt price__dt--price">Цена</dt>
+                      <dd class="price__dd price__dd--price">1000 ₽</dd>
+                      <dt class="price__dt price__dt--time">Срок</dt>
+                      <dd class="price__dd price__dd--time">30-120 мин</dd>
                     </dl>
                     <a href="#" class="prices__order action-button">Заказать</a>
                   </li>
                 </ul>
                 <div class="prices__pagination swiper-pagination"></div>
               </div>
-              <p class="prices__disclaimer">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+              <p class="prices__notice">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
               <a href="#" class="prices__offer">Получить коммерческое предложение</a>
             </article>
           </section>
 
+          <footer class="page-footer">
+            <ul class="credits">
+              <li class="credits__item"><span class="copyright">© 2019 CPS</span>
+                  <a href="#" class="credits__link credits__link--copyright" title="Разработано командой Apesong">Разработано командой Apesong</a></li>
+              <li class="credits__item"><a href="#" class="credits__link" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
+              <li class="credits__item">Информация, размещенная на данной странице, не является публичной офертой</li>
+            </ul>
+          </footer>
+
         </main>
 
-        <footer class="page-footer">
-          <ul class="page-footer__list footnotes">
-            <li class="footnotes__item"><span class="copyright">© 2019 CPS</span>
-                <a href="#" class="footnotes__link footnotes__link--copyright" title="Разработано командой Apesong">Разработано командой Apesong</a></li>
-            <li class="footnotes__item"><a href="#" class="footnotes__link" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
-            <li class="footnotes__item">Информация, размещенная на данной странице, не является публичной офертой</li>
-          </ul>
-        </footer>
+
       </div>
 
-      <aside class="sidebar sidebar--dn">
-        <header class="sidebar__head headline">
+      <aside class="aside aside--main aside--dn">
+        <header class="aside__head headline">
           <ul class="headline__list">
             <li class="headline__item headline__item--start">
               <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close headline__button">Закрыть сайдбар</button>
@@ -220,39 +220,39 @@
             </li>
           </ul>
 
-          <nav class="sidebar__nav">
-            <ul class="sidebar__list menu-list">
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link menu-list__link--active">Ремонт техники</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Услуги и сервисы</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Корпоративным клиентам</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Продавцам техники</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Партнёрам</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Производителям</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Наши сервисные центры</a></li>
-              <li class="menu-list__item"><a href="#" tabindex="1" class="menu-list__link">Контакты</a></li>
+          <nav class="aside__nav">
+            <ul class="sitenav nolist">
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link sitenav__link--active">Ремонт техники</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Услуги и сервисы</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Корпоративным клиентам</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Продавцам техники</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Партнёрам</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Производителям</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Наши сервисные центры</a></li>
+              <li class="sitenav__item"><a href="#" tabindex="1" class="sitenav__link">Контакты</a></li>
             </ul>
           </nav>
         </header>
 
-        <footer class="sidefooter">
-          <ul class="sidefooter__contacts contacts">
-            <li class="contacts__line contacts__line--icons">
-              <ul class="contacts__icons">
-                <li class="contacts__item">
-                  <a href="#" tabindex="1" title="Позвонить" class="contacts__link oicon oicon--call">Позвонить</a>
+        <footer class="aside__footer">
+          <ul class="vcard nolist">
+            <li class="vcard__row vcard__row--icons">
+              <ul class="vcard__icons nolist">
+                <li class="vcard__icon">
+                  <a href="#" tabindex="1" title="Позвонить" class="oicon oicon--call">Позвонить</a>
                 </li>
-                <li class="contacts__item">
-                  <a href="#" tabindex="1" title="Чат" class="contacts__link oicon oicon--chat">Чат</a>
+                <li class="vcard__icon">
+                  <a href="#" tabindex="1" title="Чат" class="oicon oicon--chat">Чат</a>
                 </li>
-                <li class="contacts__item">
-                  <a href="#" tabindex="1" title="Личный кабинет" class="contacts__link oicon oicon--profile">Профиль</a>
+                <li class="vcard__icon">
+                  <a href="#" tabindex="1" title="Личный кабинет" class="oicon oicon--profile">Профиль</a>
                 </li>
               </ul>
             </li>
-            <li class="contacts__line contacts__line--email"><a href="mailto:mail@cps.com" tabindex="1" class="contacts__email">mail@cps.com</a></li>
-            <li class="contacts__line contacts__line--phone"><a href="tel:8 800 890 8900" tabindex="1" class="contacts__phone">8 800 890 8900</a></li>
-            <li class="contacts__line contacts__line--langs">
-              <ul class="langs">
+            <li class="vcard__row vcard__row--email"><a href="mailto:mail@cps.com" tabindex="1" class="vcard__link vcard__link--email">mail@cps.com</a></li>
+            <li class="vcard__row vcard__row--phone"><a href="tel:8 800 890 8900" tabindex="1" class="vcard__link vcard__link--phone">8 800 890 8900</a></li>
+            <li class="vcard__row vcard__row--langs">
+              <ul class="langs nolist">
                 <li class="langs__item"><a href="#" tabindex="1" class="langs__link langs__link--active">ru</a></li>
                 <li class="langs__item"><a href="#" tabindex="1" class="langs__link">en</a></li>
                 <li class="langs__item"><a href="#" tabindex="1" class="langs__link">ch</a></li>
