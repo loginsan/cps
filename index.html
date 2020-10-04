@@ -13,34 +13,34 @@
     <div class="page-wrap">
       <div class="content">
 
-        <header class="cpanel">
-          <ul class="cpanel__blocks">
-            <li class="cpanel__block cpanel__block--primary hide-xl">
-              <ul class="cpanel__list">
-                <li class="cpanel__item">
-                  <button type="button" tabindex="1" title="Меню" class="cpanel__link oicon oicon--burger">Меню</button>
+        <header class="controls">
+          <ul class="controls__parts">
+            <li class="controls__part controls__part--start hide-xl">
+              <ul class="controls__list">
+                <li class="controls__item">
+                  <button type="button" tabindex="1" title="Меню" class="controls__link oicon oicon--burger">Меню</button>
                 </li>
-                <li class="cpanel__item cpanel__item--divider hide-xs"></li>
-                <li class="cpanel__item cpanel__item--logo logo"></li>
+                <li class="controls__item controls__item--divider hide-xs"></li>
+                <li class="controls__item controls__item--logo logo"></li>
               </ul>
             </li>
-            <li class="cpanel__block cpanel__block--secondary">
-              <ul class="cpanel__list">
-                <li class="cpanel__item hide-xs hide-xl">
-                  <a href="#" title="Позвонить" class="cpanel__link oicon oicon--call">Позвонить</a>
+            <li class="controls__part controls__part--end">
+              <ul class="controls__list">
+                <li class="controls__item hide-xs hide-xl">
+                  <a href="#" title="Позвонить" class="controls__link oicon oicon--call">Позвонить</a>
                 </li>
-                <li class="cpanel__item hide-xs hide-xl">
-                  <a href="#" title="Чат" class="cpanel__link oicon oicon--chat">Чат</a>
+                <li class="controls__item hide-xs hide-xl">
+                  <a href="#" title="Чат" class="controls__link oicon oicon--chat">Чат</a>
                 </li>
-                <li class="cpanel__item hide-xs hide-xl">
-                  <a href="#" title="Личный кабинет" class="cpanel__link oicon oicon--profile">Профиль</a>
+                <li class="controls__item hide-xs hide-xl">
+                  <a href="#" title="Личный кабинет" class="controls__link oicon oicon--profile">Профиль</a>
                 </li>
-                <li class="cpanel__item cpanel__item--divider hide-xl"></li>
-                <li class="cpanel__item">
-                  <a href="#" title="Оставить заявку" class="cpanel__link oicon oicon--repair oicon--rich">Оставить заявку</a>
+                <li class="controls__item controls__item--divider hide-xl"></li>
+                <li class="controls__item">
+                  <a href="#" title="Оставить заявку" class="controls__link oicon oicon--repair oicon--rich">Оставить заявку</a>
                 </li>
-                <li class="cpanel__item">
-                  <a href="#" title="Статус ремонта" class="cpanel__link oicon oicon--status oicon--rich">Статус ремонта</a>
+                <li class="controls__item">
+                  <a href="#" title="Статус ремонта" class="controls__link oicon oicon--status oicon--rich">Статус ремонта</a>
                 </li>
               </ul>
             </li>
@@ -208,7 +208,7 @@
 
       </div>
 
-      <aside class="aside aside--main aside--dn">
+      <aside class="aside aside--main aside--hidden">
         <header class="aside__head headline">
           <ul class="headline__list">
             <li class="headline__item headline__item--start">
@@ -262,7 +262,13 @@
         </footer>
       </aside>
     </div>
-    <div class="blank dn">&nbsp;</div>
+    <div class="blank hidden">&nbsp;</div>
+    <!--
+    <div class="modal aside-modal modal--callback">
+      <div class="modal__close"></div>
+      
+    </div>
+    -->
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>

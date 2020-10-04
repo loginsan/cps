@@ -18,6 +18,7 @@
   text-indent: 150%;
   white-space: nowrap;
   overflow: hidden;
+  transition: all .2s ease;
 }
 .oicon:active::after, .oicon:hover::after, .oicon:focus::after {
   background-color: #DD235C;

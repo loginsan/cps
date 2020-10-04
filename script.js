@@ -47,18 +47,18 @@
   const breakpChecker = function() {
     if (breakp.matches === true) {
       if (brandsSwiper !== undefined) {
-        brandsPages.classList.add("dn");
+        brandsPages.classList.add("hidden");
         brandsSwiper.destroy(true, true);
-        devicesPages.classList.add("dn");
+        devicesPages.classList.add("hidden");
         devicesSwiper.destroy(true, true);
-        pricesPages.classList.add("dn");
+        pricesPages.classList.add("hidden");
         pricesSwiper.destroy(true, true);
       }
       return;
     } // else
-    brandsPages.classList.remove("dn");
-    devicesPages.classList.remove("dn");
-    pricesPages.classList.remove("dn");
+    brandsPages.classList.remove("hidden");
+    devicesPages.classList.remove("hidden");
+    pricesPages.classList.remove("hidden");
     return enableSwiper();
   };
   breakp.addListener(breakpChecker);
@@ -83,42 +83,6 @@ devicesButton.addEventListener("click", function() {
   doExpand(this, devicesBox, "devices__pool", "Показать все");
 });
 
-// sitenav__link
-const siteNavLinks = document.querySelectorAll(".sitenav__link");
-const siteNav = document.querySelector(".sitenav");
-const siteLinkActiveClass = "sitenav__link--active";
-for (let link of siteNavLinks) {
-  link.addEventListener("click", function(evt) {
-    this.blur();
-    evt.preventDefault();
-    if (this.classList.contains("sitenav__link--active")) {
-      return -1;
-    }
-    let activeLink = siteNav.querySelector("." + siteLinkActiveClass);
-    activeLink.classList.remove(siteLinkActiveClass);
-    this.classList.add(siteLinkActiveClass);
-  });
-}
-
-
-const sidebar = document.querySelector(".aside");
-const blank = document.querySelector(".blank");
-const menuOpenBtn = document.querySelector(".oicon--burger");
-const menuCloseBtn = document.querySelector(".oicon--close");
-menuOpenBtn.addEventListener("click", function() {
-  sidebar.classList.remove("aside--dn");
-  blank.classList.toggle("dn");
-});
-menuCloseBtn.addEventListener("click", function() {
-  sidebar.classList.add("aside--dn");
-  blank.classList.toggle("dn");
-});
-blank.addEventListener("click", function() {
-  sidebar.classList.add("aside--dn");
-  blank.classList.toggle("dn");
-});
-
-
 const doExpand = function(button, target, cname, text, textR) {
   textR = textR || "Скрыть";
   let reverse = button.classList.contains("expand-button--reverse");
@@ -128,3 +92,38 @@ const doExpand = function(button, target, cname, text, textR) {
   button.classList.toggle("expand-button--reverse");
   button.textContent = (reverse)? text : textR;
 }
+
+// sitenav__link
+const siteNavLinks = document.querySelectorAll(".sitenav__link");
+const siteNav = document.querySelector(".sitenav");
+const siteNavActive = "sitenav__link--active";
+for (let link of siteNavLinks) {
+  link.addEventListener("click", function(evt) {
+    this.blur();
+    evt.preventDefault();
+    if (this.classList.contains(siteNavActive)) {
+      return -1;
+    }
+    let activeLink = siteNav.querySelector("." + siteNavActive);
+    activeLink.classList.remove(siteNavActive);
+    this.classList.add(siteNavActive);
+  });
+}
+
+
+const sidebar = document.querySelector(".aside");
+const blank = document.querySelector(".blank");
+const menuOpenBtn = document.querySelector(".oicon--burger");
+const menuCloseBtn = document.querySelector(".oicon--close");
+menuOpenBtn.addEventListener("click", function() {
+  sidebar.classList.remove("aside--hidden");
+  blank.classList.toggle("hidden");
+});
+menuCloseBtn.addEventListener("click", function() {
+  sidebar.classList.add("aside--hidden");
+  blank.classList.toggle("hidden");
+});
+blank.addEventListener("click", function() {
+  sidebar.classList.add("aside--hidden");
+  blank.classList.toggle("hidden");
+});
