@@ -49,7 +49,7 @@
 
         <main class="page">
 
-          <h1 class="page__title page-title">Услуги и сервисы</h1>
+          <h1 class="page__title page-title heading">Услуги и сервисы</h1>
 
           <nav class="page__menu chapters">
             <ul class="chapters__list">
@@ -212,7 +212,7 @@
         <header class="aside__head headline">
           <ul class="headline__list">
             <li class="headline__item headline__item--start">
-              <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close headline__button">Закрыть сайдбар</button>
+              <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close oicon--close-main headline__button">Закрыть сайдбар</button>
               <a href="./index.html" tabindex="1" class="headline__link headline__link--logo logo" title="Перейти на главную страницу">На главную</a>
             </li>
             <li class="headline__item headline__item--end">
@@ -239,13 +239,13 @@
             <li class="vcard__row vcard__row--icons">
               <ul class="vcard__icons nolist">
                 <li class="vcard__icon">
-                  <a href="#" tabindex="1" title="Позвонить" class="oicon oicon--call">Позвонить</a>
+                  <a href="#" tabindex="1" title="Заказать звонок" class="oicon oicon--call">Заказать звонок</a>
                 </li>
                 <li class="vcard__icon">
-                  <a href="#" tabindex="1" title="Чат" class="oicon oicon--chat">Чат</a>
+                  <a href="#" tabindex="1" title="Обратная связь" class="oicon oicon--chat">Обратная связь</a>
                 </li>
                 <li class="vcard__icon">
-                  <a href="#" tabindex="1" title="Личный кабинет" class="oicon oicon--profile">Профиль</a>
+                  <a href="#" tabindex="1" title="Личный кабинет" class="oicon oicon--profile">Личный кабинет</a>
                 </li>
               </ul>
             </li>
@@ -263,12 +263,23 @@
       </aside>
     </div>
     <div class="blank hidden">&nbsp;</div>
-    <!--
+
     <div class="modal aside-modal modal--callback">
-      <div class="modal__close"></div>
-      
+      <div class="modal__close">
+        <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close modal__close-button">Закрыть сайдбар</button>
+      </div>
+      <h2 class="heading modal__title">Обратная связь</h2>
+      <form action="#" class="modal__form form" name="callback">
+        <fieldset class="form__fieldset">
+          <input type="text" value="" placeholder="Имя" tabindex="1" name="name" class="form__field" />
+          <input type="text" value="" placeholder="Телефон" tabindex="1" name="phone" class="form__field" />
+          <input type="text" value="" placeholder="Электронная почта" tabindex="1" name="email" class="form__field" />
+          <textarea rows="5" placeholder="Сообщение" tabindex="1" name="message" class="form__field form__field--area"></textarea>
+          <p class="form__notice">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link" tabindex="1">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link" tabindex="1">политикой конфиденциальности</a></p>
+          <button type="submit" class="form__submit action-button" name="submit">Отправить</button>
+        </fieldset>
+      </form>
     </div>
-    -->
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>

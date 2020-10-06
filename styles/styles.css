@@ -136,26 +136,9 @@ ul, ol {
 
 
 /* PAGE TITLE */
-.page__title {
-  position: relative;
-  margin: 0 0 1.5rem;
-  padding-left: 1rem;
-}
 .page-title {
-  font-family: 'TT Lakes Bold';
   font-size: 1.75rem;
   line-height: 1.43;
-  color: #1B1C21;
-}
-.page-title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 40px;
-  background-color: #41F6D7;
-  border-radius: 0 4px 4px 0;
 }
 @media screen and (min-width:768px) {
   .page__title {
@@ -164,14 +147,7 @@ ul, ol {
 }
 @media screen and (min-width:1440px) {
   .page__title {
-    padding-left: 2rem;
     padding-right: 45%;
-  }
-  .page-title::before {
-    left: 2px;
-    width: 3px;
-    height: 40px;
-    border-radius: 2px;
   }
 }
 
@@ -845,6 +821,35 @@ ul, ol {
 }
 
 
+.heading {
+  position: relative;
+  margin: 0 0 1.5rem;
+  padding-left: 1rem;
+  font-family: 'TT Lakes Bold';
+  color: #1B1C21;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 40px;
+  background-color: #41F6D7;
+  border-radius: 0 4px 4px 0;
+}
+@media screen and (min-width:1440px) {
+  .heading {
+    padding-left: 2rem;
+  }
+  .heading::before {
+    left: 2px;
+    width: 3px;
+    border-radius: 2px;
+  }
+}
+
+
 /* MODALS */
 .blank {
   position: fixed;
@@ -856,6 +861,89 @@ ul, ol {
   background-color: rgba(255, 255, 255, .75);
 }
 
+.modal {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  overflow: visible;
+}
+.modal__title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.modal__form {
+  padding: 0 1rem 1rem;
+}
+.modal__close {
+  padding: 1.5rem 1rem 2rem;
+}
+@media screen and (min-width:540px) {
+  .modal {
+    position: absolute;
+    left: auto;
+    width: 440px;
+    padding-top: 2rem;
+    border-left: 1px solid #D9FFF5;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  }
+  .modal__title {
+    padding-left: 2rem;
+  }
+  .modal__title::before {
+    left: -1px;
+  }
+  .modal__form {
+    padding: 0 2rem 1rem;
+  }
+  .modal__close {
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    left: -4.5rem;
+    padding: 0;
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.form__fieldset::after {
+  clear: both;
+}
+.form__field {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
+  font-family: "TT Lakes Medium";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #B5B6BC;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+}
+.form__notice {
+  padding: 0;
+  margin: 0 0 1rem;
+  font-size: .875rem;
+  line-height: 1rem;
+  color: #1B1C21;
+}
+.form__link {
+  text-decoration: none;
+  color: #FF3E79;
+}
+.form__submit {
+  float:right;
+}
 
 .swiper-container-horizontal>.swiper-pagination-bullets {
   bottom: 0;
