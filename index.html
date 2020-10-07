@@ -27,10 +27,10 @@
             <li class="controls__part controls__part--end">
               <ul class="controls__list">
                 <li class="controls__item hide-xs hide-xl">
-                  <a href="#" title="Позвонить" class="controls__link oicon oicon--call">Позвонить</a>
+                  <button title="Заказать звонок" data-area="top" class="controls__link oicon oicon--call" type="button" />
                 </li>
                 <li class="controls__item hide-xs hide-xl">
-                  <a href="#" title="Чат" class="controls__link oicon oicon--chat">Чат</a>
+                  <button title="Обратная связь" data-area="top" class="controls__link oicon oicon--chat" type="button" />
                 </li>
                 <li class="controls__item hide-xs hide-xl">
                   <a href="#" title="Личный кабинет" class="controls__link oicon oicon--profile">Профиль</a>
@@ -212,7 +212,7 @@
         <header class="aside__head headline">
           <ul class="headline__list">
             <li class="headline__item headline__item--start">
-              <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close oicon--close-main headline__button">Закрыть сайдбар</button>
+              <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close oicon--close-main headline__button" data-parent=".aside--main">Закрыть сайдбар</button>
               <a href="./index.html" tabindex="1" class="headline__link headline__link--logo logo" title="Перейти на главную страницу">На главную</a>
             </li>
             <li class="headline__item headline__item--end">
@@ -239,10 +239,10 @@
             <li class="vcard__row vcard__row--icons">
               <ul class="vcard__icons nolist">
                 <li class="vcard__icon">
-                  <a href="#" tabindex="1" title="Заказать звонок" class="oicon oicon--call">Заказать звонок</a>
+                  <button tabindex="1" data-area="aside" title="Заказать звонок" class="oicon oicon--call" type="button" />
                 </li>
                 <li class="vcard__icon">
-                  <a href="#" tabindex="1" title="Обратная связь" class="oicon oicon--chat">Обратная связь</a>
+                  <button tabindex="1" data-area="aside" title="Обратная связь" class="oicon oicon--chat" type="button" />
                 </li>
                 <li class="vcard__icon">
                   <a href="#" tabindex="1" title="Личный кабинет" class="oicon oicon--profile">Личный кабинет</a>
@@ -264,22 +264,36 @@
     </div>
     <div class="blank hidden">&nbsp;</div>
 
-    <div class="modal aside-modal modal--callback">
-      <div class="modal__close">
-        <button type="button" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close modal__close-button">Закрыть сайдбар</button>
-      </div>
-      <h2 class="heading modal__title">Обратная связь</h2>
-      <form action="#" class="modal__form form" name="callback">
+    <aside class="modal aside--feedback hidden">
+      <header class="modal__header">
+        <button type="button" data-parent=".aside--feedback" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close modal__close">Закрыть сайдбар</button>
+        <h2 class="heading modal__title">Обратная связь</h2>
+      </header>
+      <form action="#" class="modal__body form" name="feedback">
         <fieldset class="form__fieldset">
           <input type="text" value="" placeholder="Имя" tabindex="1" name="name" class="form__field" />
           <input type="text" value="" placeholder="Телефон" tabindex="1" name="phone" class="form__field" />
           <input type="text" value="" placeholder="Электронная почта" tabindex="1" name="email" class="form__field" />
           <textarea rows="5" placeholder="Сообщение" tabindex="1" name="message" class="form__field form__field--area"></textarea>
           <p class="form__notice">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link" tabindex="1">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link" tabindex="1">политикой конфиденциальности</a></p>
-          <button type="submit" class="form__submit action-button" name="submit">Отправить</button>
+          <button type="submit" class="form__submit action-button" name="submit" tabindex="1">Отправить</button>
         </fieldset>
       </form>
-    </div>
+    </aside>
+
+    <aside class="modal aside--callorder hidden">
+      <header class="modal__header">
+        <button type="button" data-parent=".aside--callorder" tabindex="1" title="Закрыть сайдбар" class="oicon oicon--close modal__close">Закрыть сайдбар</button>
+        <h2 class="heading modal__title">Заказать звонок</h2>
+      </header>
+      <form action="#" class="modal__body form" name="callorder">
+        <fieldset class="form__fieldset">
+          <input type="text" value="" placeholder="Телефон" tabindex="1" name="phone" class="form__field" />
+          <p class="form__notice">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link" tabindex="1">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link" tabindex="1">политикой конфиденциальности</a></p>
+          <button type="submit" class="form__submit action-button" name="submit" tabindex="1">Отправить</button>
+        </fieldset>
+      </form>
+    </aside>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
