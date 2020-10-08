@@ -1,0 +1,39 @@
+.chapters__item {
+  box-sizing: border-box;
+  padding: .5rem 1rem;
+  margin-right: 0;
+  border: 2px solid #F8F8F8;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.chapters__item--active {
+  background: #FFFFFF;
+  border-color: #B8FFEC;
+}
+.chapters__item:hover {
+  background: #FFFFFF;
+}
+.chapters__link {
+  text-decoration: none;
+  color: #7E7E82;
+}
+.chapters__link:active, .chapters__link:hover, .chapters__link:focus {
+  color: #1B1C21;
+}
+.chapters__list {
+  display: flex;
+  list-style: none;
+  overflow: scroll;
+}
+.chapters__list::after {
+  content: "";
+  width: 5rem;
+}
+@media screen and (min-width:1440px) {
+  .chapters__list {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}

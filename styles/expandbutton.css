@@ -22,7 +22,7 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-right: .5rem;
-  background: transparent url('./../img/icon-readmore.svg') 50% 50% no-repeat;
+  background: transparent url('./../img/icon-more.svg') 50% 50% no-repeat;
   transform: rotate(0deg)
   transition: transform .2s linear;
 }

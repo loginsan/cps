@@ -1,0 +1,37 @@
+/* .vcard {} */
+.vcard__row--icons {
+  margin-bottom: 1rem;
+}
+.vcard__row--email {
+  margin-bottom: .75rem;
+}
+.vcard__row--phone {
+  margin-bottom: 2.5rem;
+}
+.vcard__icons {
+  display: flex;
+  gap: 1rem
+}
+.vcard__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #1B1C21;
+  background-color: #FFFFFF;
+  outline: none;
+}
+.vcard__link:active, .vcard__link:hover, .vcard__link:focus {
+  background-color: #41F6D7;
+  transition: background-color .4s ease
+}
+.vcard__email {
+  font-family: 'TT Lakes Medium';
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.2px;
+}
+.vcard__phone {
+  font-family: 'TT Lakes Bold';
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.6px;
+}

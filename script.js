@@ -102,7 +102,11 @@ const doExpand = function(button, target, cname, text, textR) {
 }
 
 // SiteNavLinks animate
-const siteNav = {links: $$(".sitenav__link"), elem: $(".sitenav"), active: "sitenav__link--active"};
+const siteNav = {
+  links: $$(".sitenav__link"),
+  elem: $(".sitenav"),
+  active: "sitenav__link--active"
+};
 for (let link of siteNav.links) {
   link.addEventListener("click", function(evt) {
     this.blur();
@@ -142,24 +146,20 @@ for (let btn of btnsClose) {
   });
 }
 
-for (let btn of btnsCall) {
-  btn.addEventListener("click", function() {
-    if (this.dataset.area === "aside") {
-      asideMain.classList.add("aside--hidden");
-    }
-    asideCallOrder.classList.remove("hidden");
-    blank.classList.remove("hidden");
-  });
+const btnsShowModal = function(btns, modal) {
+  for (let btn of btns) {
+    btn.addEventListener("click", function() {
+      if (this.dataset.area === "aside") {
+        asideMain.classList.add("aside--hidden");
+      }
+      modal.classList.remove("hidden");
+      blank.classList.remove("hidden");
+      this.blur();
+    });
+  }
 }
-for (let btn of btnsChat) {
-  btn.addEventListener("click", function() {
-    if (this.dataset.area === "aside") {
-      asideMain.classList.add("aside--hidden");
-    }
-    asideFeedback.classList.remove("hidden");
-    blank.classList.remove("hidden");
-  });
-}
+btnsShowModal(btnsCall, asideCallOrder);
+btnsShowModal(btnsChat, asideFeedback);
 
 blank.addEventListener("click", function() {
   asideMain.classList.add("aside--hidden");
