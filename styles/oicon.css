@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 .oicon::after {
-  content: "";
+  content: '';
   display: block;
   width: 2.5rem;
   height: 2.5rem;
@@ -26,21 +26,21 @@
   filter: hue-rotate(190deg) brightness(2);
   transition: all .5s ease;
 }
-.oicon--burger::after { background-image: url('./../img/icon-menu.svg') }
-.oicon--call::after { background-image: url('./../img/icon-phone.svg') }
-.oicon--chat::after { background-image: url('./../img/icon-chat.svg') }
-.oicon--profile::after { background-image: url('./../img/icon-profile.svg') }
-.oicon--repair::after { background-image: url('./../img/icon-repair.svg') }
-.oicon--status::after { background-image: url('./../img/icon-checkstatus.svg') }
-.oicon--close::after { background-image: url('./../img/icon-close.svg') }
-.oicon--search::after { background-image: url('./../img/icon-search.svg') }
+.oicon--burger::after { background-image: url(./../img/icon-menu.svg) }
+.oicon--call::after { background-image: url(./../img/icon-phone.svg) }
+.oicon--chat::after { background-image: url(./../img/icon-chat.svg) }
+.oicon--profile::after { background-image: url(./../img/icon-profile.svg) }
+.oicon--repair::after { background-image: url(./../img/icon-repair.svg) }
+.oicon--status::after { background-image: url(./../img/icon-checkstatus.svg) }
+.oicon--close::after { background-image: url(./../img/icon-close.svg) }
+.oicon--search::after { background-image: url(./../img/icon-search.svg) }
 
 @media screen and (min-width:1440px) {
   .oicon--rich {
     position: relative;
     padding-right: 3rem;
     margin-left: 1rem;
-    font-family: 'TT Lakes Medium';
+    font-family: 'TT Lakes Medium', sans-serif;
     font-size: 1rem;
     line-height: 2.5rem;
     color: #1B1C21;

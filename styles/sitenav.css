@@ -7,7 +7,7 @@
   padding-left: 1rem;
   color: #1B1C21;
   text-decoration: none;
-  font-family: 'TT Lakes Medium';
+  font-family: 'TT Lakes Medium', sans-serif;
   font-size: 1rem;
   line-height: 2rem;
 }
@@ -24,7 +24,7 @@
   color: #7E7E82;
 }
 .sitenav__link--active::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;

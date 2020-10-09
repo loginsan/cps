@@ -12,7 +12,7 @@
   width: 100%;
   margin-bottom: 1rem;
   padding: .75rem 1rem;
-  font-family: "TT Lakes Medium";
+  font-family: 'TT Lakes Medium', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #1B1C21;
@@ -35,5 +35,5 @@
   color: #FF3E79;
 }
 .form__submit {
-  float:right;
+  float: right;
 }

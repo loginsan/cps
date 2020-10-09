@@ -28,7 +28,7 @@
   overflow: scroll;
 }
 .chapters__list::after {
-  content: "";
+  content: '';
   width: 5rem;
 }
 @media screen and (min-width:1440px) {

@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'TT Lakes Regular';
+  font-family: 'TT Lakes Regular', sans-serif;
   font-size: 16px;
   background-color: #F8F8F8;
 }
@@ -54,7 +54,7 @@ ul, ol {
   display: block;
   width: 97px;
   height: 51px;
-  background: url('./../img/cps-logo.svg') 50% 50% no-repeat;
+  background: url(./../img/cps-logo.svg) 50% 50% no-repeat;
   font-size: 0;
   text-decoration: none;
 }
@@ -109,7 +109,7 @@ ul, ol {
   margin-right: 0;
 }
 .controls__item--divider {
-  content: "";
+  content: '';
   height: 2rem;
   width: 2px;
   background-color: #EAEAEA;
@@ -248,7 +248,7 @@ ul, ol {
 .chapter__title {
   padding: 1rem 5%;
   margin: 0;
-  font-family: 'TT Lakes Regular';
+  font-family: 'TT Lakes Regular', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: normal;
@@ -285,19 +285,19 @@ ul, ol {
   .cards {
     display: grid;
     margin-bottom: 1rem;
-    grid-template-areas: "card card";
+    grid-template-areas: 'card card';
     gap: 1rem;
   }
 }
 @media screen and (min-width:768px) {
   .cards {
-    grid-template-areas: "card card card";
+    grid-template-areas: 'card card card';
     gap: 1rem 1.5rem;
   }
 }
 @media screen and (min-width:1440px) {
   .cards {
-    grid-template-areas: "card card card card";
+    grid-template-areas: 'card card card card';
     gap: 1rem 2rem;
   }
 }
@@ -305,7 +305,7 @@ ul, ol {
 .cards__item {
   min-width: 224px;
   max-width: 240px;
-  grid-area: "card";
+  grid-area: 'card';
 }
 .cards__link {
   display: block;
@@ -328,7 +328,7 @@ ul, ol {
   z-index: 1;
   bottom: 1rem;
   right: 2rem;
-  content: "";
+  content: '';
   display: block;
   width: 2.5rem;
   height: 2.5rem;
@@ -423,7 +423,7 @@ ul, ol {
 }
 .price__dt {
   margin-bottom: .25rem;
-  font-family: 'TT Lakes Medium';
+  font-family: 'TT Lakes Medium', sans-serif;
   line-height: 1rem;
   color: #7E7E82;
   opacity: .72;
@@ -452,7 +452,7 @@ ul, ol {
   color: #1B1C21;
 }
 .prices__offer {
-  font-family: 'TT Lakes Medium';
+  font-family: 'TT Lakes Medium', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.2px;
@@ -466,7 +466,7 @@ ul, ol {
   position: relative;
   top: 2px;
   left: .5rem;
-  content: "";
+  content: '';
   display: inline-block;
   width: 1rem;
   height: 1rem;
@@ -653,11 +653,11 @@ ul, ol {
   position: relative;
   margin: 0 0 1.5rem;
   padding-left: 1rem;
-  font-family: 'TT Lakes Bold';
+  font-family: 'TT Lakes Bold', sans-serif;
   color: #1B1C21;
 }
 .heading::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
