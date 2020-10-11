@@ -12,7 +12,8 @@
 
 body {
   margin: 0;
-  font-family: 'TT Lakes Regular', sans-serif;
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: normal;
   font-size: 16px;
   background-color: #F8F8F8;
 }
@@ -25,6 +26,9 @@ body {
 ul, ol {
   margin: 0;
   padding: 0;
+}
+button, input, textarea {
+  font-family: inherit;
 }
 
 .hidden {
@@ -248,7 +252,7 @@ ul, ol {
 .chapter__title {
   padding: 1rem 5%;
   margin: 0;
-  font-family: 'TT Lakes Regular', sans-serif;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: normal;
@@ -358,7 +362,7 @@ ul, ol {
 .brands__link--lenovo { background-image: url(./../img/brand-lenovo.png) }
 .brands__link--samsung { background-image: url(./../img/brand-samsung.png) }
 .brands__link--apple { background-image: url(./../img/brand-apple.png) }
-.brands__button {
+.brands__expand {
   display: none;
 }
 @media screen and (min-width:540px) {
@@ -372,7 +376,7 @@ ul, ol {
     height: 10rem;
     overflow: hidden;
   }
-  .brands__button {
+  .brands__expand {
     display: flex;
   }
 }
@@ -382,7 +386,7 @@ ul, ol {
 .devices__item {
   height: 10rem;
 }
-.devices__button {
+.devices__expand {
   display: none;
 }
 @media screen and (min-width:540px) {
@@ -396,7 +400,7 @@ ul, ol {
     height: 10rem;
     overflow: hidden;
   }
-  .devices__button {
+  .devices__expand {
     display: flex;
   }
 }
@@ -423,7 +427,7 @@ ul, ol {
 }
 .price__dt {
   margin-bottom: .25rem;
-  font-family: 'TT Lakes Medium', sans-serif;
+  font-weight: 500;
   line-height: 1rem;
   color: #7E7E82;
   opacity: .72;
@@ -452,7 +456,7 @@ ul, ol {
   color: #1B1C21;
 }
 .prices__offer {
-  font-family: 'TT Lakes Medium', sans-serif;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.2px;
@@ -653,7 +657,7 @@ ul, ol {
   position: relative;
   margin: 0 0 1.5rem;
   padding-left: 1rem;
-  font-family: 'TT Lakes Bold', sans-serif;
+  font-weight: bold;
   color: #1B1C21;
 }
 .heading::before {

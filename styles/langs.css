@@ -3,7 +3,7 @@
   gap: .5rem
 }
 .langs__link {
-  font-family: 'TT Lakes Medium', sans-serif;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   text-transform: uppercase;

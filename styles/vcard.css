@@ -24,13 +24,13 @@
   transition: background-color .4s ease
 }
 .vcard__email {
-  font-family: 'TT Lakes Medium', sans-serif;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.2px;
 }
 .vcard__phone {
-  font-family: 'TT Lakes Bold', sans-serif;
+  font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
   letter-spacing: -0.6px;

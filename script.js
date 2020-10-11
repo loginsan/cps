@@ -1,64 +1,46 @@
 (function() {
   "use strict";
   const breakp = window.matchMedia( "(min-width:33.75em)" );
-  let brandsSwiper;
-  let devicesSwiper;
-  let pricesSwiper;
-  const brandsPages = document.querySelector(".brands__pagination");
-  const devicesPages = document.querySelector(".devices__pagination");
-  const pricesPages = document.querySelector(".prices__pagination");
+  let swipers = [];
+  const swiperPag = [
+    document.querySelector(".brands__bullets"),
+    document.querySelector(".devices__bullets"),
+    document.querySelector(".prices__bullets")
+  ];
+
+  const swiperCfg = function(paginationEl) {
+    return {
+      a11y: true,
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      pagination: {
+        el: paginationEl,
+        clickable: true
+      }
+    }
+  }
 
   const enableSwiper = function() {
-    brandsSwiper = new Swiper(".brands__pool", {
-      a11y: true,
-      keyboardControl: true,
-      grabCursor: true,
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      pagination: {
-        el: ".brands__pagination",
-        clickable: true
-      }
-    });
-    devicesSwiper = new Swiper(".devices__pool", {
-      a11y: true,
-      keyboardControl: true,
-      grabCursor: true,
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      pagination: {
-        el: ".devices__pagination",
-        clickable: true
-      }
-    });
-    pricesSwiper = new Swiper(".prices__pool", {
-      a11y: true,
-      keyboardControl: true,
-      grabCursor: true,
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      pagination: {
-        el: ".prices__pagination",
-        clickable: true
-      }
-    });
+    swipers[0] = new Swiper( ".brands__pool", swiperCfg( ".brands__bullets" ));
+    swipers[1] = new Swiper( ".devices__pool", swiperCfg( ".devices__bullets" ));
+    swipers[2] = new Swiper( ".prices__pool", swiperCfg( ".prices__bullets" ));
   };
 
   const breakpChecker = function() {
     if (breakp.matches === true) {
-      if (brandsSwiper !== undefined) {
-        brandsPages.classList.add("hidden");
-        brandsSwiper.destroy(true, true);
-        devicesPages.classList.add("hidden");
-        devicesSwiper.destroy(true, true);
-        pricesPages.classList.add("hidden");
-        pricesSwiper.destroy(true, true);
+      if (swipers[0] !== undefined) {
+        for (let p of swiperPag) {
+          p.classList.add("hidden");
+        }
+        for (let s of swipers) {
+          s.destroy(true, true);
+        }
       }
       return;
     } // else
-    brandsPages.classList.remove("hidden");
-    devicesPages.classList.remove("hidden");
-    pricesPages.classList.remove("hidden");
+    for (let p of swiperPag) {
+      p.classList.remove("hidden");
+    }
     return enableSwiper();
   };
   breakp.addListener(breakpChecker);
@@ -73,32 +55,20 @@ const $$ = function(query) {
 }
 
 // Expand Blocks
-const storyButton = $(".story__button");
-const storyBox = $(".story__body");
-storyButton.addEventListener("click", function() {
-  doExpand(this, storyBox, "story__body", "Читать далее");
-});
-
-const brandsButton = $(".brands__button");
-const brandsBox = $(".brands__pool");
-brandsButton.addEventListener("click", function() {
-  doExpand(this, brandsBox, "brands__pool", "Показать все");
-});
-
-const devicesButton = $(".devices__button");
-const devicesBox = $(".devices__pool");
-devicesButton.addEventListener("click", function() {
-  doExpand(this, devicesBox, "devices__pool", "Показать все");
-});
-
-const doExpand = function(button, target, cname, text, textR) {
-  textR = textR || "Скрыть";
-  let reverse = button.classList.contains("expand-button--reverse");
-  let height = target.scrollHeight;
-  target.style = (reverse)? "" : `height: ${height}px`;
-  target.classList.toggle(cname + "--short");
-  button.classList.toggle("expand-button--reverse");
-  button.textContent = (reverse)? text : textR;
+const expands = [
+  {btn: $(".story__expand"), box: $(".story__body"), cname: "story__body", btext: "Читать далее"},
+  {btn: $(".brands__expand"), box: $(".brands__pool"), cname: "brands__pool", btext: "Показать все"},
+  {btn: $(".devices__expand"), box: $(".devices__pool"), cname: "devices__pool", btext: "Показать все"}
+];
+for (let e of expands) {
+  e.btn.addEventListener("click", function() {
+    let reverse = e.btn.classList.contains("expand-button--reverse");
+    let height = e.box.scrollHeight;
+    e.box.style = (reverse)? "" : `height: ${height}px`;
+    e.box.classList.toggle(e.cname + "--short");
+    e.btn.classList.toggle("expand-button--reverse");
+    e.btn.textContent = (reverse)? e.btext : "Скрыть";
+  });
 }
 
 // SiteNavLinks animate
@@ -111,12 +81,11 @@ for (let link of siteNav.links) {
   link.addEventListener("click", function(evt) {
     this.blur();
     evt.preventDefault();
-    if (this.classList.contains(siteNav.active)) {
-      return -1;
+    if (!this.classList.contains(siteNav.active)) {
+      let activeLink = siteNav.elem.querySelector("." + siteNav.active);
+      activeLink.classList.remove(siteNav.active);
+      this.classList.add(siteNav.active);
     }
-    let activeLink = siteNav.elem.querySelector("." + siteNav.active);
-    activeLink.classList.remove(siteNav.active);
-    this.classList.add(siteNav.active);
   });
 }
 
