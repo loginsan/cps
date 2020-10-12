@@ -8,7 +8,7 @@
     document.querySelector(".prices__bullets")
   ];
 
-  const swiperCfg = function(paginationEl) {
+  const swiperTpl = function(paginationEl) {
     return {
       a11y: true,
       slidesPerView: "auto",
@@ -19,28 +19,36 @@
       }
     }
   }
-
   const enableSwiper = function() {
-    swipers[0] = new Swiper( ".brands__pool", swiperCfg( ".brands__bullets" ));
-    swipers[1] = new Swiper( ".devices__pool", swiperCfg( ".devices__bullets" ));
-    swipers[2] = new Swiper( ".prices__pool", swiperCfg( ".prices__bullets" ));
+    swipers[0] = new Swiper(".brands__pool", swiperTpl(".brands__bullets"));
+    swipers[1] = new Swiper(".devices__pool", swiperTpl(".devices__bullets"));
+    swipers[2] = new Swiper(".prices__pool", swiperTpl(".prices__bullets"));
   };
+  const destroySwiper = function(swipersArray) {
+    for (let s of swipersArray) {
+      s.destroy(true, true);
+    }
+  }
+  const showBullets = function(pagiArray) {
+    for (let p of pagiArray) {
+      p.classList.remove("hidden");
+    }
+  }
+  const hideBullets = function(pagiArray) {
+    for (let p of pagiArray) {
+      p.classList.add("hidden");
+    }
+  }
 
   const breakpChecker = function() {
     if (breakp.matches === true) {
       if (swipers[0] !== undefined) {
-        for (let p of swiperPag) {
-          p.classList.add("hidden");
-        }
-        for (let s of swipers) {
-          s.destroy(true, true);
-        }
+        hideBullets(swiperPag);
+        destroySwiper(swipers);
       }
       return;
     } // else
-    for (let p of swiperPag) {
-      p.classList.remove("hidden");
-    }
+    showBullets(swiperPag);
     return enableSwiper();
   };
   breakp.addListener(breakpChecker);
@@ -94,7 +102,7 @@ const asideMain = $(".aside--main");
 const asideFeedback = $(".aside--feedback");
 const asideCallOrder = $(".aside--callorder");
 const blank = $(".blank");
-const btnOpenMenu = $(".oicon--burger");
+const btnOpenMenu = $(".oicon--menu");
 const btnsClose = $$(".oicon--close");
 const btnsCall = $$(".oicon--call");
 const btnsChat = $$(".oicon--chat");

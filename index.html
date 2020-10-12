@@ -11,249 +11,245 @@
   </head>
   <body class="cps-page">
     <div class="page-wrap">
-      <div class="content">
 
-        <header class="controls">
-          <ul class="controls__parts">
-            <li class="controls__part controls__part--start hide-xl">
-              <ul class="controls__list">
-                <li class="controls__item">
-                  <button type="button" tabindex="1" title="Меню" class="controls__link oicon oicon--burger">Меню</button>
+      <main class="page">
+
+        <header class="page__header controls pan">
+          <ul class="controls__list">
+            <li class="controls__item hide-xl">
+              <ul class="hub">
+                <li class="hub__item">
+                  <button type="button" tabindex="1" title="Меню" class="oicon oicon--menu" />
                 </li>
-                <li class="controls__item controls__item--divider hide-xs"></li>
-                <li class="controls__item controls__item--logo logo"></li>
+                <li class="hub__divider hide-xs"></li>
+                <li class="hub__item logo"></li>
               </ul>
             </li>
-            <li class="controls__part controls__part--end">
-              <ul class="controls__list">
-                <li class="controls__item hide-xs hide-xl">
-                  <button title="Заказать звонок" data-area="top" class="controls__link oicon oicon--call" type="button" />
+            <li class="controls__item">
+              <ul class="hub">
+                <li class="hub__item hide-xs hide-xl">
+                  <button title="Заказать звонок" data-area="top" class="oicon oicon--call" type="button" />
                 </li>
-                <li class="controls__item hide-xs hide-xl">
-                  <button title="Обратная связь" data-area="top" class="controls__link oicon oicon--chat" type="button" />
+                <li class="hub__item hide-xs hide-xl">
+                  <button title="Обратная связь" data-area="top" class="oicon oicon--chat" type="button" />
                 </li>
-                <li class="controls__item hide-xs hide-xl">
-                  <a href="#" title="Личный кабинет" class="controls__link oicon oicon--profile">Профиль</a>
+                <li class="hub__item hide-xs hide-xl">
+                  <a href="#" title="Личный кабинет" class="hub__link oicon oicon--profile">Профиль</a>
                 </li>
-                <li class="controls__item controls__item--divider hide-xl"></li>
-                <li class="controls__item">
-                  <a href="#" title="Оставить заявку" class="controls__link oicon oicon--repair oicon--rich">Оставить заявку</a>
+                <li class="hub__divider hide-xl"></li>
+                <li class="hub__item">
+                  <a href="#" title="Оставить заявку" class="hub__link oicon oicon--repair oicon--rich">Оставить заявку</a>
                 </li>
-                <li class="controls__item">
-                  <a href="#" title="Статус ремонта" class="controls__link oicon oicon--status oicon--rich">Статус ремонта</a>
+                <li class="hub__item">
+                  <a href="#" title="Статус ремонта" class="hub__link oicon oicon--status oicon--rich">Статус ремонта</a>
                 </li>
               </ul>
             </li>
           </ul>
         </header>
 
-        <main class="page">
+        <h1 class="page__title heading">Услуги и сервисы</h1>
 
-          <h1 class="page__title page-title heading">Услуги и сервисы</h1>
+        <nav class="page__menu chapters pan">
+          <ul class="chapters__list">
+            <li class="chapters__item chapters__item--active"><a href="#" class="chapters__link">Ремонтируемые бренды</a></li>
+            <li class="chapters__item"><a href="#" class="chapters__link">Дополнительные услуги</a></li>
+            <li class="chapters__item"><a href="#" class="chapters__link">Цены на услуги</a></li>
+            <li class="chapters__item"><a href="#" class="chapters__link">Адреса сервисных центров</a></li>
+            <li class="chapters__item"><a href="#" class="chapters__link">Специальные цены</a></li>
+            <li class="chapters__item"><a href="#" class="chapters__link">Отзывы</a></li>
+          </ul>
+        </nav>
 
-          <nav class="page__menu chapters">
-            <ul class="chapters__list">
-              <li class="chapters__item chapters__item--active"><a href="#" class="chapters__link">Ремонтируемые бренды</a></li>
-              <li class="chapters__item"><a href="#" class="chapters__link">Дополнительные услуги</a></li>
-              <li class="chapters__item"><a href="#" class="chapters__link">Цены на услуги</a></li>
-              <li class="chapters__item"><a href="#" class="chapters__link">Адреса сервисных центров</a></li>
-              <li class="chapters__item"><a href="#" class="chapters__link">Специальные цены</a></li>
-              <li class="chapters__item"><a href="#" class="chapters__link">Отзывы</a></li>
-            </ul>
-          </nav>
+        <section class="page__story story pan">
+          <article class="story__wrap">
+            <div class="story__body story__body--short">
+              <p class="story__line">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+              <p class="story__line">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+              <p class="story__line">Ты начнешь обучение в команде студентов. Вместе вы пройдете все этапы подготовки. Также ты получишь доступ к закрытом сообществу студентов всех направлений и сможешь задавать вопросы всем, в том числе и выпускникам.</p>
+            </div>
+            <button class="story__expand expand-button">Читать далее</button>
+          </article>
+          <figure class="story__figure">
+            <img src="./img/cps-story.png" alt="CPS Services" class="story__img" />
+          </figure>
+        </section>
 
-          <section class="page__story story">
-            <article class="story__wrap">
-              <div class="story__body story__body--short">
-                <p class="story__line">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <p class="story__line">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-                <p class="story__line">Ты начнешь обучение в команде студентов. Вместе вы пройдете все этапы подготовки. Также ты получишь доступ к закрытом сообществу студентов всех направлений и сможешь задавать вопросы всем, в том числе и выпускникам.</p>
-              </div>
-              <button class="story__expand expand-button">Читать далее</button>
-            </article>
-            <figure class="story__figure">
-              <img src="./img/cps-story.png" alt="CPS Services" class="story__img" />
-            </figure>
-          </section>
+        <section class="page__part chapter chapter--brands" id="brands">
+          <h2 class="chapter__title pan">Ремонт техники различных брендов</h2>
+          <article class="chapter__body pan brands">
+            <div class="chapter__pool brands__pool brands__pool--short swiper-container">
+              <ul class="cards nolist swiper-wrapper">
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--lenovo">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--samsung">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--apple">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--viewsonic">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--bosch">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--hp">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--acer">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--sony">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--lenovo">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--samsung">&nbsp;</a>
+                </li>
+                <li class="swiper-slide cards__item">
+                  <a href="./sidebar.html" class="cards__link cards__link--apple">&nbsp;</a>
+                </li>
+              </ul>
+              <div class="brands__bullets swiper-pagination"></div>
+            </div>
+            <button class="chapter__expand brands__expand expand-button" type="button">Показать все</button>
+          </article>
+        </section>
 
-          <section class="page__part chapter chapter--brands" id="brands">
-            <h2 class="chapter__title">Ремонт техники различных брендов</h2>
-            <article class="chapter__body brands">
-              <div class="brands__pool brands__pool--short swiper-container">
-                <ul class="brands__list cards nolist swiper-wrapper">
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--lenovo">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--samsung">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--apple">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--viewsonic">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--bosch">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--hp">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--acer">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--sony">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--lenovo">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--samsung">&nbsp;</a>
-                  </li>
-                  <li class="brands__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="brands__link cards__link brands__link--apple">&nbsp;</a>
-                  </li>
-                </ul>
-                <div class="brands__bullets swiper-pagination"></div>
-              </div>
-              <button class="brands__expand expand-button" type="button">Показать все</button>
-            </article>
-          </section>
+        <section class="page__part chapter chapter--devices" id="devices">
+          <h2 class="chapter__title pan">Ремонт различных видов техники</h2>
+          <article class="chapter__body pan devices">
+            <div class="chapter__pool devices__pool devices__pool--short swiper-container">
+              <ul class="cards nolist swiper-wrapper">
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--notebook">Ремонт ноутбуков</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--tablet">Ремонт планшетов</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--pc">Ремонт ПК</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--monitor">Ремонт мониторов</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--phone">Ремонт телефонов</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--watch">Ремонт часов</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--vr">Ремонт VR-устройств</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--tv">Ремонт телевизоров</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--game">Ремонт игровых приставок</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--household">Ремонт бытовой техники</a>
+                </li>
+                <li class="swiper-slide cards__item cards__item--device">
+                  <a href="./sidebar.html" class="cards__link cards__link--robot">Ремонт роботов и дронов</a>
+                </li>
+              </ul>
+              <div class="devices__bullets swiper-pagination"></div>
+            </div>
+            <button class="chapter__expand devices__expand expand-button" type="button">Показать все</button>
+          </article>
+        </section>
 
-          <section class="page__part chapter chapter--devices" id="devices">
-            <h2 class="chapter__title">Ремонт различных видов техники</h2>
-            <article class="chapter__body devices">
-              <div class="devices__pool devices__pool--short swiper-container">
-                <ul class="devices__list cards nolist swiper-wrapper">
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--notebook">Ремонт ноутбуков</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--tablet">Ремонт планшетов</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--pc">Ремонт ПК</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--monitor">Ремонт мониторов</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--phone">Ремонт телефонов</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--watch">Ремонт часов</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--vr">Ремонт VR-устройств</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--tv">Ремонт телевизоров</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--game">Ремонт игровых приставок</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--household">Ремонт бытовой техники</a>
-                  </li>
-                  <li class="devices__item swiper-slide cards__item">
-                    <a href="./sidebar.html" class="devices__link cards__link devices__link--robot">Ремонт роботов и дронов</a>
-                  </li>
-                </ul>
-                <div class="devices__bullets swiper-pagination"></div>
-              </div>
-              <button class="devices__expand expand-button" type="button">Показать все</button>
-            </article>
-          </section>
+        <section class="page__part chapter chapter--prices" id="prices">
+          <h2 class="chapter__title pan">Цены на услуги</h2>
+          <article class="chapter__body pan prices">
+            <div class="prices__labels">
+              <dl class="price price--label">
+                <dt class="price__dt price__dt--label price__dt--service">Ремонтные услуги</dt>
+                <dt class="price__dt price__dt--label price__dt--price">Цена</dt>
+                <dt class="price__dt price__dt--label price__dt--time">Срок</dt>
+              </dl>
+            </div>
+            <div class="prices__pool swiper-container">
+              <ul class="prices__list nolist swiper-wrapper">
+                <li class="prices__item swiper-slide">
+                  <dl class="price">
+                    <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                    <dd class="price__dd price__dd--service">Диагностика</dd>
+                    <dt class="price__dt price__dt--price">Цена</dt>
+                    <dd class="price__dd price__dd--price">Бесплатно</dd>
+                    <dt class="price__dt price__dt--time">Срок</dt>
+                    <dd class="price__dd price__dd--time">30 мин</dd>
+                  </dl>
+                  <a href="#" class="prices__order action-button">Заказать</a>
+                </li>
+                <li class="prices__item swiper-slide">
+                  <dl class="price">
+                    <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                    <dd class="price__dd price__dd--service">Замена дисплея</dd>
+                    <dt class="price__dt price__dt--price">Цена</dt>
+                    <dd class="price__dd price__dd--price">1000 ₽</dd>
+                    <dt class="price__dt price__dt--time">Срок</dt>
+                    <dd class="price__dd price__dd--time">30-120 мин</dd>
+                  </dl>
+                  <a href="#" class="prices__order action-button">Заказать</a>
+                </li>
+                <li class="prices__item swiper-slide">
+                  <dl class="price">
+                    <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                    <dd class="price__dd price__dd--service">Замена полифонического динамика</dd>
+                    <dt class="price__dt price__dt--price">Цена</dt>
+                    <dd class="price__dd price__dd--price">1000 ₽</dd>
+                    <dt class="price__dt price__dt--time">Срок</dt>
+                    <dd class="price__dd price__dd--time">30-120 мин</dd>
+                  </dl>
+                  <a href="#" class="prices__order action-button">Заказать</a>
+                </li>
+                <li class="prices__item swiper-slide">
+                  <dl class="price">
+                    <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                    <dd class="price__dd price__dd--service">Тестирование с выдачей технического заключения</dd>
+                    <dt class="price__dt price__dt--price">Цена</dt>
+                    <dd class="price__dd price__dd--price">1000 ₽</dd>
+                    <dt class="price__dt price__dt--time">Срок</dt>
+                    <dd class="price__dd price__dd--time">30-120 мин</dd>
+                  </dl>
+                  <a href="#" class="prices__order action-button">Заказать</a>
+                </li>
+                <li class="prices__item swiper-slide">
+                  <dl class="price">
+                    <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
+                    <dd class="price__dd price__dd--service">Замена программного обеспечения</dd>
+                    <dt class="price__dt price__dt--price">Цена</dt>
+                    <dd class="price__dd price__dd--price">1000 ₽</dd>
+                    <dt class="price__dt price__dt--time">Срок</dt>
+                    <dd class="price__dd price__dd--time">30-120 мин</dd>
+                  </dl>
+                  <a href="#" class="prices__order action-button">Заказать</a>
+                </li>
+              </ul>
+              <div class="prices__bullets swiper-pagination"></div>
+            </div>
+            <p class="prices__notice">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+            <a href="#" class="prices__offer">Получить коммерческое предложение</a>
+          </article>
+        </section>
 
-          <section class="page__part chapter chapter--prices" id="prices">
-            <h2 class="chapter__title">Цены на услуги</h2>
-            <article class="chapter__body prices">
-              <div class="prices__labels">
-                <dl class="price price--label">
-                  <dt class="price__dt price__dt--label price__dt--service">Ремонтные услуги</dt>
-                  <dt class="price__dt price__dt--label price__dt--price">Цена</dt>
-                  <dt class="price__dt price__dt--label price__dt--time">Срок</dt>
-                </dl>
-              </div>
-              <div class="prices__pool swiper-container">
-                <ul class="prices__list nolist swiper-wrapper">
-                  <li class="prices__item swiper-slide">
-                    <dl class="price">
-                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
-                      <dd class="price__dd price__dd--service">Диагностика</dd>
-                      <dt class="price__dt price__dt--price">Цена</dt>
-                      <dd class="price__dd price__dd--price">Бесплатно</dd>
-                      <dt class="price__dt price__dt--time">Срок</dt>
-                      <dd class="price__dd price__dd--time">30 мин</dd>
-                    </dl>
-                    <a href="#" class="prices__order action-button">Заказать</a>
-                  </li>
-                  <li class="prices__item swiper-slide">
-                    <dl class="price">
-                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
-                      <dd class="price__dd price__dd--service">Замена дисплея</dd>
-                      <dt class="price__dt price__dt--price">Цена</dt>
-                      <dd class="price__dd price__dd--price">1000 ₽</dd>
-                      <dt class="price__dt price__dt--time">Срок</dt>
-                      <dd class="price__dd price__dd--time">30-120 мин</dd>
-                    </dl>
-                    <a href="#" class="prices__order action-button">Заказать</a>
-                  </li>
-                  <li class="prices__item swiper-slide">
-                    <dl class="price">
-                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
-                      <dd class="price__dd price__dd--service">Замена полифонического динамика</dd>
-                      <dt class="price__dt price__dt--price">Цена</dt>
-                      <dd class="price__dd price__dd--price">1000 ₽</dd>
-                      <dt class="price__dt price__dt--time">Срок</dt>
-                      <dd class="price__dd price__dd--time">30-120 мин</dd>
-                    </dl>
-                    <a href="#" class="prices__order action-button">Заказать</a>
-                  </li>
-                  <li class="prices__item swiper-slide">
-                    <dl class="price">
-                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
-                      <dd class="price__dd price__dd--service">Тестирование с выдачей технического заключения</dd>
-                      <dt class="price__dt price__dt--price">Цена</dt>
-                      <dd class="price__dd price__dd--price">1000 ₽</dd>
-                      <dt class="price__dt price__dt--time">Срок</dt>
-                      <dd class="price__dd price__dd--time">30-120 мин</dd>
-                    </dl>
-                    <a href="#" class="prices__order action-button">Заказать</a>
-                  </li>
-                  <li class="prices__item swiper-slide">
-                    <dl class="price">
-                      <dt class="price__dt price__dt--service">Ремонтные услуги</dt>
-                      <dd class="price__dd price__dd--service">Замена программного обеспечения</dd>
-                      <dt class="price__dt price__dt--price">Цена</dt>
-                      <dd class="price__dd price__dd--price">1000 ₽</dd>
-                      <dt class="price__dt price__dt--time">Срок</dt>
-                      <dd class="price__dd price__dd--time">30-120 мин</dd>
-                    </dl>
-                    <a href="#" class="prices__order action-button">Заказать</a>
-                  </li>
-                </ul>
-                <div class="prices__bullets swiper-pagination"></div>
-              </div>
-              <p class="prices__notice">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-              <a href="#" class="prices__offer">Получить коммерческое предложение</a>
-            </article>
-          </section>
+        <footer class="page__footer pan">
+          <ul class="credits">
+            <li class="credits__item"><span class="copyright">© 2019 CPS</span>
+                <a href="#" class="credits__link credits__link--copyright" title="Разработано командой Apesong">Разработано командой Apesong</a></li>
+            <li class="credits__item"><a href="#" class="credits__link" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
+            <li class="credits__item">Информация, размещенная на данной странице, не является публичной офертой</li>
+          </ul>
+        </footer>
 
-          <footer class="page-footer">
-            <ul class="credits">
-              <li class="credits__item"><span class="copyright">© 2019 CPS</span>
-                  <a href="#" class="credits__link credits__link--copyright" title="Разработано командой Apesong">Разработано командой Apesong</a></li>
-              <li class="credits__item"><a href="#" class="credits__link" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
-              <li class="credits__item">Информация, размещенная на данной странице, не является публичной офертой</li>
-            </ul>
-          </footer>
-
-        </main>
-
-
-      </div>
+      </main>
 
       <aside class="aside aside--main aside--hidden">
         <header class="aside__head headline">
