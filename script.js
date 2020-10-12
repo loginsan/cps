@@ -68,16 +68,19 @@ const expands = [
   {btn: $(".brands__expand"), box: $(".brands__pool"), cname: "brands__pool", btext: "Показать все"},
   {btn: $(".devices__expand"), box: $(".devices__pool"), cname: "devices__pool", btext: "Показать все"}
 ];
-for (let e of expands) {
-  e.btn.addEventListener("click", function() {
-    let reverse = e.btn.classList.contains("expand-button--reverse");
-    let height = e.box.scrollHeight;
-    e.box.style = (reverse)? "" : `height: ${height}px`;
-    e.box.classList.toggle(e.cname + "--short");
-    e.btn.classList.toggle("expand-button--reverse");
-    e.btn.textContent = (reverse)? e.btext : "Скрыть";
-  });
+const clickExpand = function(exp) {
+  for (let e of exp) {
+    e.btn.addEventListener("click", function() {
+      let reverse = e.btn.classList.contains("expand-button--reverse");
+      let height = e.box.scrollHeight;
+      e.box.style = (reverse)? "" : `height: ${height}px`;
+      e.box.classList.toggle(e.cname + "--short");
+      e.btn.classList.toggle("expand-button--reverse");
+      e.btn.textContent = (reverse)? e.btext : "Скрыть";
+    });
+  }
 }
+clickExpand(expands);
 
 // SiteNavLinks animate
 const siteNav = {
@@ -85,22 +88,23 @@ const siteNav = {
   elem: $(".sitenav"),
   active: "sitenav__link--active"
 };
-for (let link of siteNav.links) {
-  link.addEventListener("click", function(evt) {
-    this.blur();
-    evt.preventDefault();
-    if (!this.classList.contains(siteNav.active)) {
-      let activeLink = siteNav.elem.querySelector("." + siteNav.active);
-      activeLink.classList.remove(siteNav.active);
-      this.classList.add(siteNav.active);
-    }
-  });
+const clickSiteNav = function(nav){
+  for (let link of nav.links) {
+    link.addEventListener("click", function(evt) {
+      this.blur();
+      evt.preventDefault();
+      if (!this.classList.contains(nav.active)) {
+        let activeLink = nav.elem.querySelector("." + nav.active);
+        activeLink.classList.remove(nav.active);
+        this.classList.add(nav.active);
+      }
+    });
+  }
 }
+clickSiteNav(siteNav);
 
 // Sidebars
-const asideMain = $(".aside--main");
-const asideFeedback = $(".aside--feedback");
-const asideCallOrder = $(".aside--callorder");
+const aside = [$(".aside--main"), $(".aside--feedback"), $(".aside--callorder")];
 const blank = $(".blank");
 const btnOpenMenu = $(".oicon--menu");
 const btnsClose = $$(".oicon--close");
@@ -108,7 +112,7 @@ const btnsCall = $$(".oicon--call");
 const btnsChat = $$(".oicon--chat");
 
 btnOpenMenu.addEventListener("click", function() {
-  asideMain.classList.remove("aside--hidden");
+  aside[0].classList.remove("aside--hidden");
   blank.classList.remove("hidden");
 });
 for (let btn of btnsClose) {
@@ -116,30 +120,33 @@ for (let btn of btnsClose) {
     let parent = this.dataset.parent;
     blank.classList.toggle("hidden");
     if (parent === ".aside--main") {
-      asideMain.classList.add("aside--hidden");
+      aside[0].classList.add("aside--hidden");
     } else {
       $(parent).classList.add("hidden");
     }
   });
 }
 
+const showModal = function(btn, modal) {
+  return function() {
+    if (btn.dataset.area === "aside") {
+      aside[0].classList.add("aside--hidden");
+    }
+    modal.classList.remove("hidden");
+    blank.classList.remove("hidden");
+    btn.blur();
+  }
+}
 const btnsShowModal = function(btns, modal) {
   for (let btn of btns) {
-    btn.addEventListener("click", function() {
-      if (this.dataset.area === "aside") {
-        asideMain.classList.add("aside--hidden");
-      }
-      modal.classList.remove("hidden");
-      blank.classList.remove("hidden");
-      this.blur();
-    });
+    btn.addEventListener("click", showModal(btn, modal) );
   }
 }
 btnsShowModal(btnsCall, asideCallOrder);
 btnsShowModal(btnsChat, asideFeedback);
 
 blank.addEventListener("click", function() {
-  asideMain.classList.add("aside--hidden");
+  aside[0].classList.add("aside--hidden");
   asideFeedback.classList.add("hidden");
   asideCallOrder.classList.add("hidden");
   blank.classList.add("hidden");

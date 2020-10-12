@@ -309,7 +309,7 @@ button, input, textarea {
     height: auto;
     overflow: visible;
     transition: all .3s ease;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .chapter__expand {
     display: flex;
@@ -325,19 +325,19 @@ button, input, textarea {
   .cards {
     display: grid;
     margin-bottom: 1rem;
-    grid-template-areas: 'card card';
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 }
 @media screen and (min-width:768px) {
   .cards {
-    grid-template-areas: 'card card card';
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem 1.5rem;
   }
 }
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1060px) {
   .cards {
-    grid-template-areas: 'card card card card';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem 2rem;
   }
 }
@@ -346,7 +346,11 @@ button, input, textarea {
   min-width: 224px;
   max-width: 240px;
   height: 4.5rem;
-  grid-area: 'card';
+}
+@media screen and (min-width:540px) {
+  .cards__item {
+    max-width: none;
+  }
 }
 .cards__item--device {
   height: 10rem;
@@ -361,29 +365,29 @@ button, input, textarea {
   border: 1px solid #EAEAEA;
   background: #FFFFFF no-repeat 1rem 50%;
   color: #1B1C21;
+  font-weight: 500;
   text-decoration: none;
   outline: none;
 }
 .cards__link:active, .cards__link:hover, .cards__link:focus {
-  border-color: #41F6D7
+  border-color: #41F6D7;
 }
 .cards__link::after {
   position: absolute;
   z-index: 1;
   bottom: 1rem;
-  right: 2rem;
+  right: 1rem;
   content: '';
   display: block;
   width: 2.5rem;
   height: 2.5rem;
   background: url(./../img/icon-go.svg) 0 0 no-repeat;
-  opacity: 0;
+  opacity: 1;
+  transition: all .2s linear;
 }
 .cards__link:active::after, .cards__link:hover::after, .cards__link:focus::after {
-  border-radius: 50%;
-  opacity: 1;
-  right: 1rem;
-  transition: all .2s linear;
+  opacity: 0;
+  right: 0;
 }
 .cards__link--lenovo { background-image: url(./../img/brand-lenovo.png) }
 .cards__link--samsung { background-image: url(./../img/brand-samsung.png) }
@@ -399,6 +403,9 @@ button, input, textarea {
 
 
 /* BRANDS SECTION */
+.brands__pool {
+  height: 6.75rem;
+}
 @media screen and (min-width:540px) {
   .brands__pool--short {
     height: 10rem;
@@ -407,6 +414,9 @@ button, input, textarea {
 }
 
 /* DEVICES SECTION */
+.devices__pool {
+  height: 12.25rem;
+}
 @media screen and (min-width:540px) {
   .devices__pool--short {
     height: 10rem;
@@ -730,4 +740,16 @@ button, input, textarea {
 
 .swiper-container-horizontal>.swiper-pagination-bullets {
   bottom: 0;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 .375rem;
+}
+.swiper-pagination-bullet {
+  width: .75rem;
+  height: .75rem;
+  background-color: #DDDDDD;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC;
 }

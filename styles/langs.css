@@ -9,11 +9,12 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #1B1C21;
+  background-color: #FFFFFF;
   outline: none;
+  transition: background-color .4s ease
 }
 .langs__link:active, .langs__link:hover, .langs__link:focus {
-  color: #41F6D7;
-  transition: color .4s ease
+  background-color: #41F6D7;
 }
 .langs__link--active {
   color: #7E7E82;
